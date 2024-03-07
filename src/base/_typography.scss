@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Futura PT';
+  src: url('/content/FuturaCyrillicBook.woff2') format('woff2'),
+    url('/content/FuturaCyrillicBook.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Futura PT';
+  src: url('/content/FuturaCyrillicBold.woff2') format('woff2'),
+    url('/content/FuturaCyrillicBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Futura PT';
+  src: url('/content/FuturaCyrillicExtraBold.woff2') format('woff2'),
+    url('/content/FuturaCyrillicExtraBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}

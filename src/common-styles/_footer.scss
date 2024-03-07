@@ -1,0 +1,191 @@
+@import '../base/utils';
+@import '../base/base';
+@import '../base/normalize';
+@import '../base/typography';
+
+.footer {
+  overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 22px 0 53px;
+
+  @include nmd {
+    background: url('/content/first/mobile/bg-img/footer_result.webp') no-repeat
+      center;
+    background-size: cover;
+  }
+  @include nxs {
+    padding: 22px 0 22px;
+  }
+
+  &__menu {
+    li:not(:last-of-type) {
+      padding-bottom: 9px;
+    }
+    a {
+      transition: all 0.2s linear;
+
+      &:hover {
+        color: $YBlack;
+      }
+    }
+    @include nmd {
+      display: none;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 1.3fr;
+    grid-template-areas:
+      'logo menu hours'
+      'phone menu cards';
+    grid-column-gap: 88px;
+    grid-row-gap: 28px;
+    padding-left: 45px;
+    padding-right: 0px;
+    margin-top: 13px;
+
+    @include nlgs {
+      padding-right: 0px;
+    }
+
+    @include nlg {
+      padding-left: 16px;
+      grid-column-gap: 74px;
+    }
+
+    @include nmd {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding-left: 0px;
+    }
+
+    @include nsm {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        'phone'
+        'hours'
+        ' cards';
+      grid-row-gap: 16px;
+      justify-items: center;
+      text-align: center;
+    }
+
+    @include nmd {
+      padding-bottom: 42px;
+      grid-row-gap: 24px;
+    }
+    @include nsm {
+      grid-row-gap: 7.5vw;
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+
+    @include nmd {
+      display: none;
+    }
+  }
+
+  &__phone {
+    grid-area: phone;
+    font-family: $font-petrov;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 128%;
+    text-transform: uppercase;
+    color: $YRealWhite;
+    padding-left: 113px;
+    padding-top: 30px;
+
+    @include nmd {
+      padding-left: 0px;
+    }
+    @include nsm {
+      font-size: 6.3vw;
+    }
+    @include nxs {
+      padding-top: 5px;
+      font-weight: 600;
+    }
+
+    a {
+      transition: all 0.2s;
+      &:hover {
+        color: $YBlack;
+      }
+
+      @include nsm {
+        &:hover {
+          color: $YRealWhite;
+        }
+      }
+    }
+  }
+
+  &__menu {
+    grid-area: menu;
+
+    @include nsm {
+      display: none;
+    }
+  }
+
+  &__hours {
+    grid-area: hours;
+  }
+
+  &__cards {
+    grid-area: cards;
+    p {
+      font-weight: 600;
+    }
+  }
+
+  &__text {
+    font-family: $font-petrov;
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 160.86%;
+    text-transform: uppercase;
+    color: $YRealWhite;
+    @include nsm {
+      font-size: 6.9vw;
+      padding-bottom: 20px;
+    }
+    @include nxs {
+      font-weight: 600;
+      padding-bottom: 0px;
+    }
+  }
+
+  &__payment-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    img {
+      margin-bottom: -34px;
+      @include nsm {
+        width: 22.5vw;
+      }
+    }
+
+    @include nmd {
+      justify-content: center;
+    }
+
+    @include nxs {
+      margin-top: -17px;
+    }
+  }
+  &__payment-list li:nth-child(2) {
+    margin-bottom: -20px;
+  }
+  &__payment-list li:nth-child(3) {
+    margin-left: 7px;
+  }
+}
