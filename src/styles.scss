@@ -44,9 +44,11 @@
     @include nsm {
       display: flex;
       align-items: center;
+      position: absolute;
       justify-content: flex-start;
       padding-top: 6vw;
       padding-bottom: 6vw;
+      background-color: #FFF;
 
     }
   }
@@ -54,6 +56,29 @@
     font-family: HelveticaNeueCyr;
     font-weight: 500;
     font-size: 31px;
+    text-align: start;
+    @include nsm {
+      margin-left: 2vw;
+      font-size: 4.37vw;
+    }
+  }
+  &__wrapper-mob-popup {
+    display: none;
+    @include nsm {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 6vw;
+      padding-bottom: 6vw;
+      background-color: #FFF;
+
+    }
+  }
+  &__title-mob-popup {
+    font-family: HelveticaNeueCyr;
+    font-weight: 500;
+    font-size: 31px;
+    text-align: start;
     @include nsm {
       margin-left: 2vw;
       font-size: 4.37vw;
@@ -67,37 +92,79 @@
     position: relative;
     height: 50px;
     width: 50px;
+    z-index: 20;
+    @include nxs {
+      margin-left: 31.9vw;
+    }
   }
 
   &__line:nth-of-type(2) {
     bottom: 9px;
     transition: all 0.4s ease-out;
-
+    @include nxs {
+      bottom: 12px;
+    }
   }
   &__line:nth-of-type(1) {
-    // transform: rotate(45deg)
     bottom: 22px;
-    transition: all 0.4s ease-out;
+    transition: all 0.3s ease-out;
+    @include nxs {
+      bottom: 22px;
+    }
   }
 
   &__line:nth-of-type(3) {
-    // margin-top: -8px;
-    // transform: rotate(-45deg)
     top: 11px;
     transition: all 0.4s ease-out;
+    @include nxs {
+      top: 15px;
+    }
   }
-  &__line:nth-of-type(2).active {
+  &__line:nth-of-type(1).cross-js {
     transform: scale(0);
   }
-  &__line:nth-of-type(1).active {
+  &__line:nth-of-type(2).cross-js {
     transform: rotate(45deg);
-    width: 40px;
+    width: 34px;
+    bottom: 24px;
+    @include nxs {
+      width: 20px;
+      bottom: 26px;
+    }
   }
 
-  &__line:nth-of-type(3).active {
-    top: 23px;
+  &__line:nth-of-type(3).cross-js {
     transform: rotate(-45deg);
-    width: 40px;
+    width: 34px;
+    top: 21px;
+    @include nxs {
+      width: 20px;
+      top: 21px;
+    }
+  }
+  &__line:nth-of-type(3).cross-js.helicopter-js {
+    width: 31px;
+    top: 12px;
+    right: 29px;
+    transform: rotate(315deg);
+    @include nxs {
+      width: 20px;
+      top: 13px;
+    }
+  }
+  &__line:nth-of-type(2).cross-js.helicopter-js {
+    right: 29px;
+    width: 31px;
+    bottom: 33px;
+    transform: rotate(405deg);
+    @include nxs {
+      width: 20px;
+      bottom: 34px;
+    }
+  }
+  
+  &__line.transparent-js {
+    display: none;
   }
 
   &__line {
@@ -107,6 +174,10 @@
     background-color: #000;
     border-radius: 40px;
     position: absolute;
+    @include nxs {
+      height: 3px;
+      width: 35px;
+    }
   }
 
   &__nav {
@@ -137,6 +208,71 @@
       font-size: 1.54vw;
     }
   }
+  &__item:hover {
+    color: #3C3C3C;
+    text-shadow: #3C3C3C 1px 0 1px;
+  }
+  &__popup-mob {
+    text-align: center;
+    transition: transform 0.4s ease-out;
+    transform: translateY(-1500px);
+    z-index: 10;
+    display: none; 
+    @include nsm {
+      display: block;
+    }
+  }
+  &__popup-mob.active {
+    transform: translateY(-0px);
+  }
+
+  &__popup-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vw;
+    border-radius: 0 0 30px 30px;
+    background-color: #fff;
+  }
+
+
+  &__item-mob {
+    font-size: 5.1vw;
+    padding: 4.25vw 0vw;
+    color: #3C3C3C;
+  }
+
+  &__phone-wrapper {
+    border-top: 2px #E1EEFF solid;
+    margin-top: 2vw;
+    padding: 6.5vw 0vw 6vw 0vw;
+    justify-content: center;
+    display: flex;
+  }
+
+  &__img {
+    width: 6.3vw;
+    margin-right: 2vw;
+    padding-top: 0.4vw;
+  }
+
+  &__phone {
+    font-family: HelveticaNeueCyr;
+    font-weight: 600;
+    font-size: 5.5vw;
+    position: relative;
+    color: #2468FF;
+  }
+  &__phone::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.5vw;
+    background-color: #2468FF;
+    top: 6vw;
+    left: 0;
+
+  }
+
 }
 
 
