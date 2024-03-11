@@ -10,7 +10,7 @@
 //главный контейнер
 
 .container-box {
-  max-width: 1230px;
+  max-width: 1560px;
   margin: 0 auto;
   box-sizing: border-box;
 
@@ -32,34 +32,5 @@
   
 }
 
-.main-width {
-  width: 1710px;
-  margin: 0 auto;
-  box-sizing: border-box;
-
-  @include nlgx {
-    width: 1240px;
-    padding-left: 16px;
-    padding-right: 16px;
-
-    @include nlg {
-      width: 1023px;
-      padding-left: 16px;
-      padding-right: 16px;
-
-      @include nmd {
-        width: 708px;
-        padding-left: 0;
-        padding-right: 0;
-
-        @include nsm {
-          width: 100%;
-          padding-left: 16px;
-          padding-right: 16px;
-        }
-      }
-    }
-  }
-}
 
 

@@ -1,0 +1,145 @@
+@import './base/utils';
+@import './base/base';
+@import './base/normalize';
+@import './base/typography';
+@import './common-styles/footer';
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+.container-box {
+  max-width: 1560px;
+  margin: 0 auto;
+  padding: 0 16px;
+  @include nlg {
+    padding: 0 1vw;
+  }
+  @include nsm {
+    padding: 0 3vw;
+    
+  }
+}
+
+
+
+.header {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 162px;
+    @include nlgx {
+      height: 8.5vw;
+    }
+    @include nsm {
+      display: none;
+    }
+  }
+  &__wrapper-mob {
+    display: none;
+    @include nsm {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 6vw;
+      padding-bottom: 6vw;
+
+    }
+  }
+  &__title-mob {
+    font-family: HelveticaNeueCyr;
+    font-weight: 500;
+    font-size: 31px;
+    @include nsm {
+      margin-left: 2vw;
+      font-size: 4.37vw;
+    }
+  }
+
+  &__burger {
+    display: flex;
+    flex-direction: column;
+    margin-left: 36.9vw;
+    position: relative;
+    height: 50px;
+    width: 50px;
+  }
+
+  &__line:nth-of-type(2) {
+    bottom: 9px;
+    transition: all 0.4s ease-out;
+
+  }
+  &__line:nth-of-type(1) {
+    // transform: rotate(45deg)
+    bottom: 22px;
+    transition: all 0.4s ease-out;
+  }
+
+  &__line:nth-of-type(3) {
+    // margin-top: -8px;
+    // transform: rotate(-45deg)
+    top: 11px;
+    transition: all 0.4s ease-out;
+  }
+  &__line:nth-of-type(2).active {
+    transform: scale(0);
+  }
+  &__line:nth-of-type(1).active {
+    transform: rotate(45deg);
+    width: 40px;
+  }
+
+  &__line:nth-of-type(3).active {
+    top: 23px;
+    transform: rotate(-45deg);
+    width: 40px;
+  }
+
+  &__line {
+    height: 4px;
+    width: 47px;
+    background-color: #000;
+    background-color: #000;
+    border-radius: 40px;
+    position: absolute;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    width: 100%;
+    max-width: 1322px;
+    font-family: HelveticaNeueCyr;
+    font-weight: 400;
+    font-size: 24px;
+    margin-right: 12px;
+    @include nlgx {
+      max-width: 84.2vw;
+    }
+  }
+  &__logo {
+    height: 95.47px;
+    @include nlgx {
+      height: 6.06vw;
+    }
+    @include nsm {
+      height: 11.06vw;
+    }
+  }
+  &__item {
+    @include nlgx {
+      font-size: 1.54vw;
+    }
+  }
+}
+
+
+
+
+

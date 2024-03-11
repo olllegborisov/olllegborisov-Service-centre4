@@ -37,7 +37,7 @@ $xxs-media: 450px;
 }
 
 @mixin nlgx {
-  @media all and (max-width: 1699px) {
+  @media all and (max-width: 1570px) {
     @content;
   }
 }
