@@ -5,8 +5,8 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  font-size: 14px;
-  font-family: 'HelveticaNeueCyr';
+  font-size: 20px;
+  font-family: $font;
   font-weight: 400;
   // background: #181818;
   color: #181818;
@@ -43,12 +43,14 @@ ul {
 }
 
 button {
-  outline: none;
+outline: none;
   border: 0;
   background: unset;
+  background-color: #2468FF;
   &:active{
     outline: none;
   }
+  cursor: pointer;
 }
 
 iframe {

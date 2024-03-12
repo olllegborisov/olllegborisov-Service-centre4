@@ -10,8 +10,18 @@
   box-sizing: border-box;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include nlgx {
+    font-size: 1.275vw;
+  }
+}
+
 .container-box {
-  max-width: 1560px;
+  max-width: 1592px;
   margin: 0 auto;
   padding: 0 16px;
   @include nlg {
@@ -23,9 +33,13 @@
   }
 }
 
-
-
 .header {
+  @include nsm {
+    max-height: 23vw;
+  }
+  @include nsm {
+    max-height: clamp(88.38px, 25vw, 176.86px);
+  }
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -53,7 +67,7 @@
     }
   }
   &__title-mob {
-    font-family: HelveticaNeueCyr;
+    font-family: $font;
     font-weight: 500;
     font-size: 31px;
     text-align: start;
@@ -75,7 +89,7 @@
     }
   }
   &__title-mob-popup {
-    font-family: HelveticaNeueCyr;
+    font-family: $font;
     font-weight: 500;
     font-size: 31px;
     text-align: start;
@@ -95,6 +109,19 @@
     z-index: 20;
     @include nxs {
       margin-left: 31.9vw;
+    }
+  }
+
+  &__line {
+    height: 4px;
+    width: 47px;
+    background-color: #000;
+    background-color: #000;
+    border-radius: 40px;
+    position: absolute;
+    @include nxs {
+      height: 3px;
+      width: 35px;
     }
   }
 
@@ -167,18 +194,6 @@
     display: none;
   }
 
-  &__line {
-    height: 4px;
-    width: 47px;
-    background-color: #000;
-    background-color: #000;
-    border-radius: 40px;
-    position: absolute;
-    @include nxs {
-      height: 3px;
-      width: 35px;
-    }
-  }
 
   &__nav {
     display: flex;
@@ -186,7 +201,7 @@
     align-self: center;
     width: 100%;
     max-width: 1322px;
-    font-family: HelveticaNeueCyr;
+    font-family: $font;
     font-weight: 400;
     font-size: 24px;
     margin-right: 12px;
@@ -204,6 +219,7 @@
     }
   }
   &__item {
+    transition: color 0.1s ease-in, text-shadow 0.1s ease-in;
     @include nlgx {
       font-size: 1.54vw;
     }
@@ -223,14 +239,14 @@
     }
   }
   &__popup-mob.active {
-    transform: translateY(-0px);
+    transform: translateY(-20px);
   }
 
   &__popup-wrapper {
     display: flex;
     flex-direction: column;
     margin-top: 1vw;
-    border-radius: 0 0 30px 30px;
+    border-radius: 0 0 3vw 3vw;
     background-color: #fff;
   }
 
@@ -256,7 +272,7 @@
   }
 
   &__phone {
-    font-family: HelveticaNeueCyr;
+    font-family: $font;
     font-weight: 600;
     font-size: 5.5vw;
     position: relative;
@@ -272,8 +288,73 @@
     left: 0;
 
   }
-
 }
+.description {
+  height: 713px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+
+  @include nlgx {
+    height: 45.4vw;
+  }
+
+  &__background {
+    background: url("../content/images/desktop/description/bg.webp");
+    background-size: cover;
+    background-position: center;
+    width: 155%;
+  }
+
+  &__wrapper {
+    padding-top: 68px;
+    @include nlgx {
+      padding-top: 4.3vw;
+    }
+  }
+
+  &__title {
+    font-size: 46px;
+    max-width: 761px;
+    line-height: 118%;
+    @include nlgx {
+      font-size: 2.86vw;
+      max-width: 46vw;
+    }
+  }
+
+  &__text {
+    max-width: 595px;
+    font-weight: 400;
+    line-height: 34px;
+    @include nlgx {
+      max-width: 38vw;
+      line-height: 2.17vw;
+    }
+  }
+  &__text:nth-of-type(1) {
+    margin-top: 35px;
+    @include nlgx {
+      margin-top: 2.2vw;
+    }
+  }
+  &__text:nth-of-type(2) {
+    margin-top: 30px;
+    @include nlgx {
+      margin-top: 1.9vw;
+    }
+
+  }
+  &__button {
+    margin-top: 46px;
+    margin-left: 3px;
+    @include nlgx {
+      margin-top: 2.95vw;
+    }
+  }
+}
+
+
 
 
 
