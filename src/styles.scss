@@ -15,6 +15,7 @@
 }
 
 body {
+  font-family: $font;
   @include nlgx {
     font-size: 1.275vw;
   }
@@ -28,11 +29,10 @@ body {
     padding: 0 1vw;
   }
   @include nsm {
-    padding: 0 3vw;
+    padding: 0 1vw;
     
   }
 }
-
 .header {
   @include nsm {
     max-height: 23vw;
@@ -296,20 +296,30 @@ body {
   justify-content: center;
 
   @include nlgx {
-    height: 45.4vw;
+    height: 100%;
   }
 
   &__background {
-    background: url("../content/images/desktop/description/bg.webp");
+    background: url("../content/images/description/desktop/bg.webp");
     background-size: cover;
     background-position: center;
     width: 155%;
+    @include nsm {
+      background: url("../content/images/mobil/description/bg.webp");
+      background-size: cover;
+      background-position: center;
+    }
   }
 
   &__wrapper {
     padding-top: 68px;
     @include nlgx {
       padding-top: 4.3vw;
+    }
+    @include nsm {
+      padding-top: 8.3vw;
+      padding-left: 8px;
+      margin-bottom: 11.5vw;
     }
   }
 
@@ -321,6 +331,11 @@ body {
       font-size: 2.86vw;
       max-width: 46vw;
     }
+    @include nsm {
+      font-size: 6.5vw;
+      max-width: 100vw;
+      margin-bottom: 7vw;
+    }
   }
 
   &__text {
@@ -330,6 +345,11 @@ body {
     @include nlgx {
       max-width: 38vw;
       line-height: 2.17vw;
+    }
+    @include nsm {
+      max-width: 100vw;
+      font-size: 4.6vw;
+      line-height: 7.5vw;
     }
   }
   &__text:nth-of-type(1) {
@@ -341,9 +361,14 @@ body {
   &__text:nth-of-type(2) {
     margin-top: 30px;
     @include nlgx {
-      margin-top: 1.9vw;
+      margin-top: 2.1vw;
     }
-
+  }
+  &__text2 {
+    @include nsm {
+      display: inline-block;
+      margin-top: 1.4vw;
+    }
   }
   &__button {
     margin-top: 46px;
@@ -351,6 +376,190 @@ body {
     @include nlgx {
       margin-top: 2.95vw;
     }
+    @include nsm {
+      margin-top: 7.5vw;
+      font-size: 5.24vw;
+      padding: 4.4vw 25.2vw;
+      margin-left: 0px;
+      border-radius: 8px;
+    }
+  }
+  &__br {
+    display: none;
+    @include nsm {
+      display: block;
+    }
+  }
+}
+.advantages {
+  &__subtitle {
+    text-align: left;
+    font-family: $font;
+    font-size: 43px;
+    line-height: 42.48px;
+    padding-top: 68px;
+    margin-bottom: 69px;
+    padding-left: 9px;
+    @include nlgx {
+      font-size: 2.74vw;
+      line-height: 2.68vw;
+      padding-top: 4.33vw;
+      margin-bottom: 4.39vw;
+      padding-left: 0.57vw;
+    }
+    @include nsm {
+      font-size: 6.4vw;
+      padding-top: 11.33vw;
+      padding-left: 2vw;
+      margin-bottom: 12.39vw;
+
+    }
+  }
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    @include nsm {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    max-width: 368px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    @include nlgx {
+      max-width: 23.44vw;
+    }
+    @include nsm {
+      max-width: 97.8vw;
+      margin-bottom: 8vw;
+    }
+  }
+
+  &__img {
+    width: 274px;
+    margin-bottom: 12px;
+    @include nlgx {
+      width: 15.73vw;
+      margin-bottom: 0.76vw;
+    }
+    @include nsm {
+      width: 57.73vw;
+      margin-bottom: 1.5vw;
+    }
+  }
+
+  &__name {
+    font-family: $font;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 24.7px;
+    margin-bottom: 16px;
+    @include nlgx {
+      font-size: 1.59vw;
+      line-height: 1.53vw;
+      margin-bottom: 1.02vw;
+    }
+    @include nsm {
+      font-size: 4.59vw;
+      line-height: 0.53vw;
+      margin-bottom: 6.02vw;
+    }
+  }
+  &__item:nth-of-type(3) > &__name{
+    @include nsm {
+      margin-bottom: 2.02vw;
+      line-height: 8.53vw;
+      // background-color: rebeccapurple;
+    }
+  }
+
+  &__text {
+    font-family: $font;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 34px;
+    @include nlgx {
+      font-size: 1.27vw;
+      line-height: 2.17vw;
+    }
+    @include nsm {
+      font-size: 4.6vw;
+      line-height: 7.17vw;
+    }
+  }
+}
+.services {
+
+  &__subtitle {
+    text-align: left;
+    padding-top: 72px;
+    font-size: 43px;
+    margin-bottom: 40px;
+  }
+
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 168px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 363px;
+    border-radius: 12px;
+    padding: 40px 40px 13px 40px;
+    background: linear-gradient(117.79deg, #FFFFFF -22.73%, #D6DFFF 126.83%);
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 24.7px;
+    color: #2468FF;
+
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 31px;
+
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 133px;
+  }
+
+  &__text-group {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 34px;
+    width: 762px;
+  }
+
+  &__text2 {
+    margin-bottom: 70px;
+  }
+
+  &__image-group {
+    display: flex;
+    flex-direction: column;
+    width: 569px;
+  }
+
+  &__img {
+    margin-bottom: 21.97px;
   }
 }
 
