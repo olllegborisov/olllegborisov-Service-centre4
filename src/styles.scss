@@ -3,6 +3,8 @@
 @import './base/normalize';
 @import './base/typography';
 @import './common-styles/footer';
+@import './common-styles/header';
+@import './pages/guarantee';
 
 *,
 ::after,
@@ -13,14 +15,12 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   font-family: $font;
   @include nlgx {
     font-size: 1.275vw;
   }
 }
-
 .container-box {
   max-width: 1592px;
   margin: 0 auto;
@@ -31,262 +31,6 @@ body {
   @include nsm {
     padding: 0 1vw;
     
-  }
-}
-.header {
-  @include nsm {
-    max-height: 23vw;
-  }
-  @include nsm {
-    max-height: clamp(88.38px, 25vw, 176.86px);
-  }
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 162px;
-    @include nlgx {
-      height: 8.5vw;
-    }
-    @include nsm {
-      display: none;
-    }
-  }
-  &__wrapper-mob {
-    display: none;
-    @include nsm {
-      display: flex;
-      align-items: center;
-      position: absolute;
-      justify-content: flex-start;
-      padding-top: 6vw;
-      padding-bottom: 6vw;
-      background-color: #FFF;
-
-    }
-  }
-  &__title-mob {
-    font-family: $font;
-    font-weight: 500;
-    font-size: 31px;
-    text-align: start;
-    @include nsm {
-      margin-left: 2vw;
-      font-size: 4.37vw;
-    }
-  }
-  &__wrapper-mob-popup {
-    display: none;
-    @include nsm {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      padding-top: 6vw;
-      padding-bottom: 6vw;
-      background-color: #FFF;
-
-    }
-  }
-  &__title-mob-popup {
-    font-family: $font;
-    font-weight: 500;
-    font-size: 31px;
-    text-align: start;
-    @include nsm {
-      margin-left: 2vw;
-      font-size: 4.37vw;
-    }
-  }
-
-  &__burger {
-    display: flex;
-    flex-direction: column;
-    margin-left: 36.9vw;
-    position: relative;
-    height: 50px;
-    width: 50px;
-    z-index: 20;
-    @include nxs {
-      margin-left: 31.9vw;
-    }
-  }
-
-  &__line {
-    height: 4px;
-    width: 47px;
-    background-color: #000;
-    background-color: #000;
-    border-radius: 40px;
-    position: absolute;
-    @include nxs {
-      height: 3px;
-      width: 35px;
-    }
-  }
-
-  &__line:nth-of-type(2) {
-    bottom: 9px;
-    transition: all 0.4s ease-out;
-    @include nxs {
-      bottom: 12px;
-    }
-  }
-  &__line:nth-of-type(1) {
-    bottom: 22px;
-    transition: all 0.3s ease-out;
-    @include nxs {
-      bottom: 22px;
-    }
-  }
-
-  &__line:nth-of-type(3) {
-    top: 11px;
-    transition: all 0.4s ease-out;
-    @include nxs {
-      top: 15px;
-    }
-  }
-  &__line:nth-of-type(1).cross-js {
-    transform: scale(0);
-  }
-  &__line:nth-of-type(2).cross-js {
-    transform: rotate(45deg);
-    width: 34px;
-    bottom: 24px;
-    @include nxs {
-      width: 20px;
-      bottom: 26px;
-    }
-  }
-
-  &__line:nth-of-type(3).cross-js {
-    transform: rotate(-45deg);
-    width: 34px;
-    top: 21px;
-    @include nxs {
-      width: 20px;
-      top: 21px;
-    }
-  }
-  &__line:nth-of-type(3).cross-js.helicopter-js {
-    width: 31px;
-    top: 12px;
-    right: 29px;
-    transform: rotate(315deg);
-    @include nxs {
-      width: 20px;
-      top: 13px;
-    }
-  }
-  &__line:nth-of-type(2).cross-js.helicopter-js {
-    right: 29px;
-    width: 31px;
-    bottom: 33px;
-    transform: rotate(405deg);
-    @include nxs {
-      width: 20px;
-      bottom: 34px;
-    }
-  }
-  
-  &__line.transparent-js {
-    display: none;
-  }
-
-
-  &__nav {
-    display: flex;
-    justify-content: space-between;
-    align-self: center;
-    width: 100%;
-    max-width: 1322px;
-    font-family: $font;
-    font-weight: 400;
-    font-size: 24px;
-    margin-right: 12px;
-    @include nlgx {
-      max-width: 84.2vw;
-    }
-  }
-  &__logo {
-    height: 95.47px;
-    @include nlgx {
-      height: 6.06vw;
-    }
-    @include nsm {
-      height: 11.06vw;
-    }
-  }
-  &__item {
-    transition: color 0.1s ease-in, text-shadow 0.1s ease-in;
-    @include nlgx {
-      font-size: 1.54vw;
-    }
-  }
-  &__item:hover {
-    color: #3C3C3C;
-    text-shadow: #3C3C3C 1px 0 1px;
-  }
-  &__popup-mob {
-    text-align: center;
-    transition: transform 0.4s ease-out;
-    transform: translateY(-1500px);
-    z-index: 10;
-    display: none; 
-    @include nsm {
-      display: block;
-    }
-  }
-  &__popup-mob.active {
-    transform: translateY(-20px);
-  }
-
-  &__popup-wrapper {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1vw;
-    border-radius: 0 0 3vw 3vw;
-    background-color: #fff;
-  }
-
-
-  &__item-mob {
-    font-size: 5.1vw;
-    padding: 4.25vw 0vw;
-    color: #3C3C3C;
-  }
-
-  &__phone-wrapper {
-    border-top: 2px #E1EEFF solid;
-    margin-top: 2vw;
-    padding: 6.5vw 0vw 6vw 0vw;
-    justify-content: center;
-    display: flex;
-  }
-
-  &__img {
-    width: 6.3vw;
-    margin-right: 2vw;
-    padding-top: 0.4vw;
-  }
-
-  &__phone {
-    font-family: $font;
-    font-weight: 600;
-    font-size: 5.5vw;
-    position: relative;
-    color: #2468FF;
-  }
-  &__phone::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 0.5vw;
-    background-color: #2468FF;
-    top: 6vw;
-    left: 0;
-
   }
 }
 .description {
@@ -1164,21 +908,30 @@ body {
   }
 }
 .faq {
-  padding: 128px 0 120px;
+  padding-top: 128px;
+  margin-bottom: 120px;
 
   @include nlgx {
-    padding: 1.21vw 0 7.64vw;    
+    padding: 1.21vw 0 3.8vw;    
   }
-  @include nsm {
-    padding-bottom: 60px;
-  }
-  @include nxs {
-    padding: 19px 0 5px;
-  }
+  // @include nsm {
+  //   padding-bottom: 60px;
+  // }
+  // @include nxs {
+  //   padding: 19px 0 5px;
+  // }
+
 
   &__content {
     display: flex;
     justify-content: space-between;
+    @include nlgx {
+      padding-top: 8.41vw;
+    }
+    @include nsm {
+      flex-direction: column;
+      padding-top: 18.75vw;
+    }
   }
 
   &__title {
@@ -1189,18 +942,21 @@ body {
     text-align: center;
 
     @include nlgx {
-      font-size: 2.87vw;
-      line-height: 90vw;
-      margin-bottom: 140vw;
+      font-size: 2.74vw;
+      line-height: 3.18vw;
+      margin-bottom: 4.46vw;
     }
 
     @include nsm {
-      font-size: 12vw;
+      text-align: start;
+      font-size: 6.25vw;
+      line-height: 5.94vw;
+      margin-bottom: 11.25vw;
     }
 
-    @include nxs {
-      margin-bottom: 24px;
-    }
+    // @include nxs {
+    //   margin-bottom: 24px;
+    // }
   }
 
   &__list {
@@ -1208,27 +964,32 @@ body {
     margin: 0 0px 0 58px;
     padding-top: 7px;
     @include nlgx {
-      margin: 0 0px 0 116vw;
-      padding-top: 14vw;
+      margin: 0 0px 0 3.69vw;
+      padding-top: 0vw;
     }
     @include nsm {
-      margin: 0;
-    }
+    margin: 0 0px 0 3.13vw;
 
-    @include nxs {
-      padding-left: 20px;
+
     }
+    // @include nsm {
+    //   margin: 0;
+    // }
+
+    // @include nxs {
+    //   padding-left: 20px;
+    // }
 
     li {
       font-weight: 800;
       font-size: 26px;
 
       @include nlgx {
-      font-size: 52vw;
+      font-size: 1.66vw;
       }
-      @include nsm {
-        font-size: 4.5vw;
-      }
+      // @include nsm {
+      //   font-size: 4.5vw;
+      // }
     }
   }
 
@@ -1239,21 +1000,25 @@ body {
     font-size: 23.4px;
 
     @include nlgx {
-      font-size: 23px;
+      font-size: 1.46vw;
     }
-    @include nmd {
-      font-size: 3.375vw;
-      padding-right: 0px;
-      font-weight: 600;
-
-      br {
-        display: block;
-      }
-    }
-
     @include nsm {
-      font-size: clamp(4.375vw, 4vw, 50vw);
+      font-size: 5vw;
+      line-height: 5.94vw;
     }
+    // @include nmd {
+    //   font-size: 3.375vw;
+    //   padding-right: 0px;
+    //   font-weight: 600;
+
+    //   br {
+    //     display: block;
+    //   }
+    // }
+
+    // @include nsm {
+    //   font-size: clamp(4.375vw, 4vw, 50vw);
+    // }
 
     br {
       display: none;
@@ -1275,11 +1040,19 @@ body {
     position: relative;
     cursor: pointer;
     font-weight: 800;
-    font-size: 26px;
     line-height: 110.69%;
     transition: all 0.2s linear;
-    width: 1027px;
     border-bottom: 2px solid #E1EEFF;
+    width: 1027px;
+    font-size: 26px;
+
+    @include nlgx {
+      font-size: 1.66vw;
+      width: 65.41vw;
+    }
+    @include nsm {
+      width: 95vw;
+    }
   }
   &__item:last-child {
     border-bottom: none;
@@ -1287,57 +1060,70 @@ body {
 
   &__item:not(:last-of-type) {
     // margin-bottom: 35px;
-    margin-bottom: 46px;
-
-    @include nxxs {
-      margin-bottom: -10px;
+    margin-bottom: 43px;
+    @include nlgx {
+      margin-bottom: 2.74vw;
     }
+    @include nsm {
+      margin-bottom: 5.63vw;
+    }
+
+    // @include nxxs {
+    //   margin-bottom: -10px;
+    // }
   }
 
   &__question::after {
     position: absolute;
     top: 0;
     right: 8px;
-    content: url('../content/first/arrow-white.svg');
+    content: url('../content/images/faq/arrow-white.svg');
     transform: rotate(90deg);
     transition: transform 0.2s ease-in;
     // margin: 10px;
+    @include nxs {
+      right: 0.51vw;
+      content: url('../content/images/faq/arrow-white-mob.svg');
+      transform: rotate(0deg);
+    }
+
+
   }
 
-  ._active::after {
+   ._active::after {
     transform: rotate(270deg);
     transition: transform 0.2s ease-in;
+
+    @include nxs {
+      transform: rotate(180deg);
+    }
   }
 
   &__text {
 
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 150%;
-
-    margin: 14px 0 22px;
     overflow: hidden;
     opacity: 0;
     transition: all 0.2s linear;
     max-height: 0;
+    font-size: 18px;
+    line-height: 25.2px;
+    margin: 14px 0 22px;
 
-    @include nmd {
-      font-size: 20px;
-      line-height: 130%;
+    @include nlgx {
+      font-size: 1.15vw;
+      margin: 0.89vw 0 1.40vw;
+      line-height: 1.59vw;
     }
-
     @include nsm {
-      font-size: 4.4vw;
-    }
-
-    @include nxxs {
-      margin-left: -15px;
-      margin-top: 8.6px;
-      max-width: 270px;
+      font-size: 4.38vw;
+      line-height: 7.19vw;
+      margin: 5vw 0 5.63vw;
     }
   }
 }
+
 
 
 

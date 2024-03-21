@@ -18,8 +18,8 @@ body {
 
   a {
     text-decoration: none;
-    color: #848484;
 	  outline: none;
+    color: #3C3C3C;
 
     &:active{
       outline: none;
@@ -40,6 +40,9 @@ ul {
   margin: 0;
   padding: 0;
   list-style: outside none;
+}
+ol {
+  padding-inline-start: 0;
 }
 
 button {

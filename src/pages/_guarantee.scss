@@ -1,0 +1,324 @@
+@import './base/utils';
+@import './base/base';
+@import './base/normalize';
+@import './base/typography';
+@import './common-styles/footer';
+@import './common-styles/header';
+
+.guarantee {
+    text-align: center;
+    padding-top: 43px;
+    @include nlgx {
+        padding-top: 2.74vw;   
+    }
+    @include nsm {
+        padding-top: 5.94vw;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 46px;
+        line-height: 55.35px;
+        margin-bottom: 43px;
+        @include nlgx {
+            font-size: 2.93vw;
+            line-height: 3.50vw;
+            margin-bottom: 2.74vw;
+        }
+        @include nsm {
+            font-size: 6.25vw;
+            line-height: 7.50vw;
+            margin-bottom: 4.06vw;
+        }
+    }
+
+    &__subtitle {
+        color: #2468FF;
+        display: inline-block;
+        font-weight: 500;
+        font-size: 33px;
+        line-height: 40.32px;
+        margin-bottom: 43px;
+        @include nlgx {
+            font-size: 2.10vw;
+            line-height: 2.55vw;
+            margin-bottom: 2.74vw;
+        }
+        @include nsm {
+            font-size: 5vw;
+            line-height: 4.69vw;
+            margin-bottom: 6.88vw;
+            width: 65vw;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        @include nsm {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        background: linear-gradient(117.79deg, #FFFFFF -22.73%, #D6DFFF 126.83%);
+        box-shadow: 0px 3px 25.200000762939453px 0px #001F6F1C;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+        width: 496px;
+        @include nlgx {
+            border-radius: 0.64vw;
+            width: 31.59vw;
+        }
+        @include nsm {
+            margin-bottom: 4.06vw;
+            width: 95vw;
+            border-radius: 3vw;
+        }
+    }
+
+    &__item:last-of-type {
+        @include nsm {
+            height: 38vw;
+        }
+    }
+
+    &__img {
+        padding-top: 17px;
+        margin-bottom: 22px;
+        @include nlgx {
+            padding-top: 1.08vw;
+            margin-bottom: 1.40vw; 
+            width: 2.99vw;
+        }
+        @include nsm {
+            padding-top: 4.06vw;
+            margin-bottom: 4.06vw;
+            width: 8.75vw;
+        }
+    }
+
+
+    &__text {
+        margin-bottom: 19px;
+        font-size: 20px;
+        line-height: 31px;  
+        @include nlgx {
+            margin-bottom: 1.21vw;
+            font-size: 1.27vw;
+            line-height: 1.97vw;  
+        }
+        @include nsm {
+            margin-bottom: 4.06vw;
+            font-size: 4.38vw;
+            line-height: 6.56vw;  
+        }
+    }
+
+    &__item:nth-of-type(1) > &__text {
+        width: 342px;
+        @include nlgx {
+            width: 21.78vw;
+        }
+        @include nsm {
+            width: 77.19vw;
+        }
+    }
+    &__item:nth-of-type(2) > &__text {
+        width: 402px;
+        @include nlgx {
+            width: 25.61vw;
+        }
+        @include nsm {
+            width: 79.69vw;
+        }
+    }
+    &__item:nth-of-type(3) > &__text {
+        width:278px;
+        @include nlgx {
+            width: 17.71vw;
+        }
+        @include nsm {
+            width: 75.31vw;
+        }
+    }
+
+    &__phone {
+        color: #2468FF;
+    }
+}
+
+
+
+.info {
+    padding-top: 107px;
+    padding-bottom: 103px;
+
+    @include nlgx {
+        padding-top: 6.82vw;
+        padding-bottom: 6.56vw;
+    }
+    @include nsm {
+        height: 254.38vw;
+        padding-top: 13.75vw;
+        padding-bottom: 16.56vw;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        @include nsm {
+            flex-direction: column;
+        }
+    }
+    
+    &__list {
+        display: flex;
+        flex-direction: column;
+        width: 469px;
+        @include nlgx {
+            width: 29.87vw;
+        }
+        @include nsm {
+            width: 146.56vw;
+            margin-bottom: 13.75vw;
+        }
+    }
+
+
+    &__item {
+        margin-bottom: 87px;
+        font-size: 20px;
+        line-height: 31px;
+        @include nlgx {
+            margin-bottom: 5.54vw;
+            font-size: 1.27vw;
+            line-height: 1.97vw;
+        }
+        @include nsm {
+            margin-bottom: 8.13vw;
+            font-size: 4.38vw;
+            line-height: 6.56vw;
+            width: 93.75vw;
+        }
+    }
+
+    &__item:last-of-type {
+        margin-bottom: 0px;
+    }
+
+
+    &__name {
+        display: inline-block;
+        color: #2468FF;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 24.7px;
+        margin-bottom: 15px;
+        @include nlgx {
+            font-size: 1.59vw;
+            line-height: 1.53vw;
+            margin-bottom: 0.96vw;
+        }
+        @include nsm {
+            font-size: 5vw;
+            line-height: 4.69vw;
+            margin-bottom: 3.13vw;
+        }
+    }
+
+    &__guarantee-text {
+        display: inline-block;
+    }
+
+    &__ul {
+        list-style-type: disc;
+        padding-left: 32px;
+        @include nlgx {
+            padding-left: 2.04vw;    
+        }
+        @include nsm {
+            padding-left: 7.5vw;
+        }
+    }
+
+    &__li {
+        @include nsm {
+            line-height: 7.8vw;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+        @include nlgx {
+            height: 25.48vw;   
+            padding-top: 0!important;         
+        }
+        @include nsm {
+            height: 62.50vw;
+        }
+    }
+
+    &__title {
+        text-align: start!important;
+        font-weight: 500;
+        color: #2468FF;
+        text-transform: uppercase;
+        font-size: 50px;
+        line-height: 49.4px;
+        margin-bottom: 60px!important;
+        @include nlgx {
+            font-size: 3.18vw;
+            line-height: 3.12vw;
+            margin-bottom: 3.82vw!important;
+        }
+        @include nsm {
+            font-size: 6.88vw;
+            line-height: 6.56vw;
+            margin-bottom: 5vw!important;
+        }
+    }
+
+    &__faq-list {
+        margin-left: 0px!important;
+    }
+
+    &__text {
+        margin: 14px 0 30px!important;
+        @include nlgx {
+            margin: 0.89vw 0 1.91vw!important;
+        }
+        @include nsm {
+            margin: 4.38vw 0 1.94vw!important;
+        }
+    }
+
+    
+    ._active::after {
+        transform: rotate(270deg);
+        transition: transform 0.2s ease-in;
+    
+        @include nxs {
+          transform: rotate(180deg);
+        }
+      }
+
+    // &__question {
+    //     @include nsm {
+    //         padding-right: 18.44vw!important;
+    //     }
+    // }
+
+    &__br {
+        display: block!important;
+    }
+    
+
+    &__answer {}
+}
+

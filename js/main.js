@@ -88,3 +88,5 @@ document.querySelectorAll('.faq__question').forEach(item => {
     })
 })
 
+console.log('main')
+

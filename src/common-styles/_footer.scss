@@ -2,3 +2,263 @@
 @import '../base/base';
 @import '../base/normalize';
 @import '../base/typography';
+
+
+.footer {
+    background: linear-gradient(117.79deg, #FFFFFF -22.73%, rgba(224, 230, 251, 0.36) 126.83%);
+  
+    // & .container-box {
+    //   @include nlgx {
+    //     padding-right: 3vw;
+    //     padding-left: 3vw;
+    //   }
+    // }
+    &__wrapper {
+      display: flex;
+      justify-content:space-between;
+      padding-top: 44px!important;
+      @include nlgx {
+        padding-top: 2.80vw!important;
+        margin-bottom: 3.06vw;
+      }
+      @include nsm {
+        padding-top: 10.63vw!important;
+        margin-bottom: 4.69vw;
+        margin-right: 5.31vw;
+      }
+    }
+  
+    &__group {
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+      font-weight: 400;
+    }
+  
+    &__group:first-child {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 30.72px;
+      @include nlgx {
+        font-size: 1.53vw;
+        line-height: 1.91vw;
+      }
+      @include nsm {
+        display: none;
+      }
+    }
+    &__group:nth-child(2) {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 25px;
+      width: 595px;
+      padding-left: 63px;
+      @include nlgx {
+        font-size: 1.27vw;
+        line-height: 1.59vw;
+        width: 37.90vw;
+        padding-left: 4.01vw;
+      }
+      @include nsm {
+        font-size: 3.75vw;
+        line-height: 4.06vw;
+        width: auto;
+        padding-left: 0;
+      }
+    }
+  
+    &__logo {
+      margin-bottom: 79px;
+      @include nlgx {
+        margin-bottom: 4.01vw;
+        width: 21.5vw;
+      }
+      @include nsm {
+        display: none;
+      }
+    }
+  
+  
+    &__contacts-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 75px;
+      @include nlgx {
+        margin-bottom: 4.78vw;
+      }
+      @include nsm {
+        font-size: 3.43vw;
+        line-height: 4.69vw;
+        margin-bottom: 11.25vw;
+      }
+    }
+  
+  
+    &__schedule-wrapper {
+      display: flex;
+      flex-direction: column;
+      @include nsm {
+        font-size: 3.43vw;
+        line-height: 4.69vw;
+        margin-bottom: 11.25vw;
+      }
+    }
+  
+  
+    &__nav-subtitle {
+      margin-bottom: 37px;
+      @include nlgx {
+        margin-bottom: 37px;
+      }
+      @include nsm {
+        margin-bottom: 5.31vw;
+      }
+    }
+  
+    &__nav-group {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      font-size: 30px;
+      line-height: 48px;
+      height: 337px;
+      @include nlgx {
+        font-size: 1.91vw;
+        line-height: 3.06vw;
+        height: 21.46vw;
+      }
+      @include nsm {
+        font-weight: 500;
+        font-size: 4.38vw;
+        line-height: 6.56vw;
+        height: auto;
+      }
+    }
+  
+    &__page {
+      margin-bottom: 36px;
+      @include nlgx {
+        margin-bottom: 2.29vw;
+      }
+      @include nlgx {
+        margin-bottom: 4.38vw;
+      }
+    }
+  
+    &__phone-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 72px;
+      @include nlgx {
+        margin-bottom: 4.59vw;
+      }
+    }
+  
+    &__phone-name {
+      margin-bottom: 31px;
+      @include nlgx {
+        margin-bottom: 1.97vw;
+      }
+      @include nsm {
+        display: none;
+      }
+    }
+  
+    &__phone {
+      color: #2468FF;
+      position: relative;
+      font-weight: 900;
+      font-size: 44px;
+      line-height: 60px;
+      @include nlgx {
+        font-size: 2.80vw;
+        line-height: 3.82vw;
+      }
+      @include nsm {
+        font-size: 5.5vw;
+        line-height: 8.13vw;
+      }
+    }
+    &__phone::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      background-color: #2468FF;
+      bottom: 4.5px;
+      height: 2px;
+      width: 360px;
+      @include nlgx {
+        bottom: 0.25vw;
+        height: 0.13vw;
+        width: 22.93vw;
+      }
+      @include nsm {
+        bottom: 0.75vw;
+        height: 1px;
+        width: 44.6vw;
+      }
+    }
+  
+    &__payment-system-group {
+      width: 394px;
+      display: flex;
+      @include nlgx {
+        width: 25.10vw;
+      }
+      @include nsm {
+        width: 43.75vw;
+        padding-top: 8.13vw;
+      }
+    }
+  
+    &__payment-system-wrapper {}
+  
+    &__payment-system-name {
+      display: inline-block;
+      margin-bottom: 42px;
+      @include nlgx {
+        margin-bottom: 2.68vw;
+      }
+      @include nsm {
+        display: none;
+      }
+    }
+  
+    &__payment-syster {
+      margin-right: 33px;
+      @include nlgx {
+        margin-right: 2.10vw;
+        width: 4.5vw;
+      }
+      @include nsm {
+        margin-right: 5vw;
+        width: 11.88vw;
+      }
+    }
+    &__payment-syster:first-child {
+      @include nsm {
+        width: 8.88vw;
+      }
+    }
+    &__logo-mobile {
+      display: none;
+      @include nsm {
+        display: block;
+      }
+    }
+    &__logo-mobile {
+      width: 45vw;
+      @include nsm {
+        padding-top: 5vw;
+        padding-left: 1vw;
+      }
+    }
+    &__mobile {
+      display: none;
+      @include nsm {
+        display: block;
+      }
+    }
+  }
+
+  
