@@ -1,0 +1,331 @@
+.delivery {
+    padding-top: 52px;
+    @include nlgx {
+        padding-top: 3.31vw;
+    }
+    @include nsm {
+        padding-top: 5.94vw;
+    }
+
+
+
+    &__title {
+        text-align: center;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-size: 45px;
+        line-height: 55.35px;
+        margin-bottom: 59px;
+        @include nlgx {
+            font-size: 2.87vw;
+            line-height: 3.50vw;
+            margin-bottom: 3.76vw;
+        }
+        @include nsm {
+            font-size: 6.25vw;
+            line-height: 7.50vw;
+            margin-bottom: 5.63vw;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;  
+        @include nsm {
+            align-items: center;
+            flex-direction: column;
+            padding: 0 3vw!important;
+        }  
+    }
+
+    &__text-group {
+        display: flex;
+        flex-direction: column;
+        width: 631px;
+        @include nlgx {
+            width: 40.19vw;
+        }
+        @include nsm {
+            width: 94vw;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+    }
+    &__item:first-of-type {
+        margin-bottom: 41px;
+        @include nlgx {
+            margin-bottom: 2.61vw;
+        }
+        @include nsm {
+            margin-bottom: 5.25vw;
+        }
+    }
+
+    &__name {
+        color: #2468FF;
+        font-weight: 500;
+        letter-spacing: 1px;
+        font-size: 32px;
+        line-height: 40.32px;
+        @include nlgx {
+            font-size: 2.04vw;
+            line-height: 2.55vw;
+        }
+        @include nsm {
+            font-size: 5vw;
+            line-height: 4.69vw;
+        }
+    }
+
+    &__name:first-of-type {
+        margin-bottom: 8px;
+        @include nlgx {
+            margin-bottom: 0.51vw;  
+        }
+        @include nsm {
+            margin-bottom: 2.50vw;
+        }
+    }
+
+    &__name:last-of-type {
+        margin-bottom: 18px;
+        @include nlgx {
+            margin-bottom: 1.15vw;
+        }
+        @include nsm {
+            margin-bottom: 3.13vw;
+        }
+    }
+
+    &__text {
+        line-height: 30px;
+        margin-bottom: 24px;
+        @include nlgx {
+            line-height: 1.91vw;
+            margin-bottom: 1.53vw;
+        }
+        @include nsm {
+            line-height: 7.19vw;
+            font-size: 4.58vw;
+            margin-bottom: 3.13vw;
+        }
+    }
+
+
+    &__ul {
+        padding-left: 32px;
+        @include nlgx {
+            padding-left: 1.53vw;
+        }
+        @include nsm {
+            padding-left: 5.94vw; 
+            width: 90vw;
+        }
+    }
+
+
+    &__li {
+        position: relative;
+        font-size: 31px;
+        line-height: 50.2px;
+        @include nlgx {
+            font-size: 1.97vw;
+            line-height: 3.18vw;
+        }
+        @include nsm {
+            font-size: 4.68vw;
+            line-height: 8.19vw;
+        }
+    }
+
+    &__li:before {
+        content: '';
+        position: absolute;
+        background-color: #2468FF;
+        top: 18.1px; 
+        left: -30px;
+        height: 14px;
+        width: 14px;
+        border-radius: 10px;
+        @include nlgx {
+            top: 1.15vw; 
+            left: -1.91vw;
+            height: 0.89vw;
+            width: 0.89vw;
+            border-radius: 0.64vw;
+        }
+        @include nsm {
+            top: 2.03125vw; 
+            left: -5.8vw;
+            height: 3.13vw;
+            width: 3.13vw;
+            border-radius: 3.13vw;
+        }
+    }
+
+    &__img {
+        width: 815px;
+        height: 535px;
+        @include nlgx {
+            width: 51.91vw;
+            height: 34.08vw;
+        }
+        @include nsm {
+            width: 91.91vw;
+            height: 65.08vw;
+            padding-top: 5vw;
+        }
+    }
+}
+.after {
+    padding-top: 74px;
+    margin-bottom: 105px;
+    @include nlgx {
+        padding-top: 4.71vw;
+        margin-bottom: 6.69vw;
+    }
+    @include nsm {
+        padding-top: 9.38vw;
+        margin-bottom: 13.75vw;
+    }
+
+    &__subtitle {
+        text-align: center;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-size: 45px;
+        line-height: 55.35px;
+        margin-bottom: 72px;
+        @include nlgx {
+            font-size: 2.87vw;
+            line-height: 3.50vw;
+            margin-bottom: 4.59vw;
+        }
+        @include nsm {
+            font-size: 6.25vw;
+            line-height: 7.6875vw;
+            margin-bottom: 5.63vw;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        @include nsm {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        background: linear-gradient(117.79deg, #FFFFFF -22.73%, #D6DFFF 126.83%);
+        box-shadow: 0px 3px 25.200000762939453px 0px #001F6F1C;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        width: 363px;
+        height: 238px;
+        @include nlgx {
+            width: 23.12vw;
+            height: 15.16vw;
+        }
+        @include nsm {
+            width: 93.75vw;
+            height: 40vw;
+        }
+    }
+
+    &__item:nth-of-type(3) {
+        height: 296px;
+        @include nlgx {
+            height: 18.85vw;
+        }
+        @include nsm {
+            height: 56vw;
+        }
+    }
+
+    &__item:nth-of-type(2) {
+        @include nsm {
+            height: 33vw;
+        }
+    }
+
+    &__item:nth-of-type(3) > &__text {
+        width: 321px;
+        @include nlgx {
+            width: 20.45vw;
+        }
+        @include nsm {
+            width: 77.50vw;
+        }
+    }
+
+    &__name {
+        color: #2468FF;
+        letter-spacing: 1px;
+        font-weight: 500;
+        margin-bottom: 18px;
+        font-size: 28px;
+        line-height: 35.28px;
+        @include nlgx {
+            margin-bottom: 1.15vw;
+            font-size: 1.78vw;
+            line-height: 2.23vw;
+        }
+        @include nsm {
+            margin-bottom: 4.38vw;
+            font-size: 4.69vw;
+            line-height: 4.63125vw;
+        }
+    }
+
+    &__text {
+        line-height: 26.6px;
+        width: 327px;
+        @include nlgx {
+            line-height: 1.66vw;
+            width: 20.83vw;
+        }
+        @include nsm {
+            font-size: 4.38vw;
+            line-height: 6.56vw;
+            width: 82.69vw;
+        }
+    }
+    
+    &__text:nth-of-type(3) {
+        padding-top: 18px;
+        @include nlgx {
+            padding-top: 1.15vw;
+        }
+        @include nsm {
+            padding-top: 3.38vw; 
+        }
+    }
+
+    &__picture {
+        display: flex;
+    }
+
+    &__arrow {
+        width: 191px;
+        margin-bottom: 72px;
+        @include nlgx {
+            width: 12.17vw;
+            margin-bottom: 4.59vw;
+        }
+        @include nsm {
+            width: 7.17vw;
+            padding-top: 3vw;
+            margin-bottom: 1.59vw;
+        }
+
+    }
+}

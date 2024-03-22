@@ -1,0 +1,711 @@
+.contacts {
+    padding-top: 60px;
+    margin-bottom: 80px;
+    @include nlgx {
+        padding-top: 3.82vw;
+        margin-bottom: 5.10vw;
+    }
+    @include nsm {
+        padding-top: 5.94vw;
+        margin-bottom: 0vw;
+    }
+
+    &__title {
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 1px;
+        font-size: 45px;
+        line-height: 55.35px;
+        margin-bottom: 46px;
+        @include nlgx {
+            font-size: 2.87vw;
+            line-height: 3.50vw;
+            margin-bottom: 2.93vw;
+        }
+        @include nsm {
+            font-size: 5.94vw;
+            line-height: 7.6875vw;
+            margin-bottom: 7.81vw;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        @include nsm {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        background: linear-gradient(117.79deg, #FFFFFF -22.73%, #D6DFFF 126.83%);
+        box-shadow: 0px 3px 25.200000762939453px 0px #001F6F1C;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 496px;
+        height: 433px;
+        border-radius: 12px;
+        @include nlgx {
+            width: 31.59vw;
+            height: 27.58vw;
+        }
+        @include nsm {
+            width: 93.75vw;
+            height: 50.94vw;
+            margin-bottom: 6.25vw;
+        }
+    }
+
+    &__item:nth-of-type(2), &__item:nth-of-type(3) {
+        @include nsm {
+            height: 77.50vw;
+        }
+    }
+
+
+    &__img {
+        width: 55px;
+        @include nlgx {
+            width: 3.50vw;
+        }
+        @include nsm {
+            width: 8.75vw;
+        }
+    }
+
+    &__name {
+        font-weight: 500;
+        letter-spacing: 1px;
+        font-size: 32px;
+        line-height: 31.62px;
+        padding-top: 27px;
+        margin-bottom: 25px;
+        @include nlgx {
+            font-size: 2.04vw;
+            line-height: 1.97vw;
+            padding-top: 1.72vw;
+            margin-bottom: 1.59vw;
+        }
+        @include nsm {
+            font-size: 5.63vw;
+            line-height: 6.91875vw;
+            padding-top: 2.50vw;
+            margin-bottom: 2.50vw;
+        }
+    }
+
+    &__text {
+        width: 438px;
+        line-height: 34px;
+        @include nlgx {
+            width: 27.90vw;
+            line-height: 2.17vw;
+        }
+        @include nsm {
+            width: 80.31vw;
+            line-height: 6.56vw;
+            font-size: 4.38vw;
+        }
+    }
+
+    &__phone {
+        color: #2468FF;
+        font-weight: 900;
+        padding-top: 14px;
+        font-size: 40px;
+        line-height: 60px;
+        @include nlgx {
+            padding-top: 0.89vw;
+            font-size: 2.55vw;
+            line-height: 3.82vw;
+        }
+        @include nsm {
+            padding-top: 4.69vw;
+            font-size: 7.50vw;
+            line-height: 10.63vw;
+        }
+    }
+
+    &__schedule {
+        display: flex;
+        flex-direction: column;
+        font-weight: 500;
+        padding-top: 30px;
+        font-size: 22px;
+        line-height: 32px;
+        @include nlgx {
+            padding-top: 1.91vw;
+            font-size: 1.40vw;
+            line-height: 2.04vw;
+        }
+        @include nsm {
+            padding-top: 4.69vw;
+            font-size: 4.38vw;
+            line-height: 4.69vw;
+        }
+    }
+
+    &__days {
+
+    }
+
+    &__trade-in-link {
+        position: relative;
+        padding-top: 61px;
+        line-height: 32px;
+        @include nlgx {
+            padding-top: 3.89vw;
+            line-height: 2.04vw;
+        }
+        @include nsm {
+            font-size: 4.38vw;
+            padding-top: 4.69vw;
+            line-height: 6.56vw;
+        }
+    }
+    &__trade-in-link:after {
+        content: '';
+        position: absolute;
+        background-color: #3C3C3C;
+        bottom: 2px;
+        left: 0;
+        height: 1px;
+        width: 314px;
+        @include nlgx {
+            width: 20vw;
+        }
+        @include nsm {
+            width: 66.5vw;
+        }
+    }
+}
+.blocks {
+
+    &__main-wrapper {
+        display: flex;
+        justify-content: space-between;
+        @include nsm {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    
+    &__items-group {
+        display: flex;
+        flex-direction: column;
+        @include nlgx {
+            margin-right: 2vw;
+        }
+        @include nsm {
+            margin-right: 0vw;
+            margin-bottom: 6.25vw;
+        }
+    }
+    
+    &__item {
+        background: linear-gradient(117.79deg, #FFFFFF -22.73%, #D6DFFF 126.83%);
+        box-shadow: 0px 3px 25.200000762939453px 0px #001F6F1C;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:  center;
+        text-align: center;
+        border-radius: 12px;
+        width: 629px;
+        @include nlgx {
+            border-radius: 0.76vw;
+            width: 40.06vw;
+        }
+        @include nsm {
+            border-radius: 3.75vw;
+            width: 93.75vw;
+        }
+    }
+    
+    &__item:first-of-type {
+        height: 313px;
+        margin-bottom: 48px;
+        padding-bottom: 48px;
+        @include nlgx {
+            height: 19.94vw;
+            margin-bottom: 3.06vw;
+            padding-bottom: 3.06vw; 
+        }
+        @include nsm {
+            height: 39.38vw;
+            margin-bottom: 6.88vw;
+            padding-bottom: 6.25vw;
+        }
+    }
+    
+    &__item:last-of-type {
+        height: 378px;
+        @include nlgx {
+            height: 24.08vw;
+        }
+        @include nsm {
+            height: 54.06vw;
+        }
+    }
+
+
+
+    &__phone {
+        color: #2468FF;
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 60px;
+        @include nlgx {
+            font-size: 2.55vw;
+            line-height: 3.82vw;
+        }
+        @include nsm {
+            font-size: 7.50vw;
+            line-height: 10.63vw;
+        }
+    }
+
+    &__address {
+        color: #2468FF;
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 60px;
+        padding-top: 48px;
+        @include nlgx {
+            font-size: 2.04vw;
+            line-height: 3.82vw;
+            padding-top: 3.06vw;
+        }
+        @include nsm {
+            font-size: 5.63vw;
+            line-height: 10.63vw;
+            padding-top: 2.50vw;
+        }
+    }
+
+
+    &__name {
+        font-weight: 500;
+        letter-spacing: 1px;
+        font-size: 32px;
+        line-height: 31.62px;
+        width: 451px;
+        margin-top: 30px;
+        @include nlgx {
+            font-size: 2.04vw;
+            line-height: 1.97vw;
+            width: 30.73vw;
+            margin-top: 1.91vw;
+        }
+        @include nsm {
+            font-size: 5.63vw;
+            line-height: 6.91875vw;
+            width: 73.13vw;
+            margin-top: 3.75vw;
+        }
+    }
+
+    &__br {
+        display: none;
+        @include nsm {
+            display: block;
+        }
+    }
+
+    &__brands-group {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 412px;
+        padding-top: 64px;
+        @include nlgx {
+            width: 26.24vw;
+            padding-top: 4.08vw;
+        }
+        @include nsm {
+            width: 78.13vw;
+            padding-top: 8.13vw;
+        }
+    }
+
+    &__brand {
+        @include nlgx {
+            width: 11.78vw;
+        }
+        @include nsm {
+            width: 35.31vw;
+        }
+    }
+
+
+    &__brand:first-of-type {
+        margin-right: 75px;
+        margin-bottom: 47.27px;
+        @include nlgx {
+            margin-right: 4.78vw;
+            margin-bottom: 2.99vw;
+
+        }
+        @include nsm {
+            margin-right: 14.06vw;
+            margin-bottom: 4.69vw; 
+        }
+    }
+    &__brand:nth-of-type(2) {
+        margin-bottom: 47.27px;
+        @include nlgx {
+            margin-bottom: 2.99vw;
+            width: 9.62vw;
+        }
+        @include nsm {
+            width: 28.44vw;
+        }
+
+    }
+}
+
+.form2 {
+    background: linear-gradient(117.79deg, #FFFFFF -22.73%, #D6DFFF 126.83%);
+    box-shadow: 0px 3px 25.200000762939453px 0px #001F6F1C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    width: 895px;
+    height: 740px!important;
+    margin-bottom: 150px;
+    @include nlgx {
+        width: 57.01vw;
+        height: 47.13vw!important;
+        margin-bottom: 9.55vw;
+    }
+    @include nsm {
+        width: 100vw;
+        height: 179.38vw!important;
+        margin-bottom: 12.19vw;
+    }
+
+    &__subtitle-wrapper {
+        width: 735px;
+        margin-right: 27px;
+        @include nlgx {
+            width: 46.82vw;
+            margin-right: 1.72vw;
+        }
+        @include nsm {
+            width: 100vw;
+            margin-right: 0vw;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 500;
+        font-size: 43px;
+        line-height: 42.48px;
+        padding-top: 56px;
+    
+        @include nlgx {
+          font-size: 2.74vw;
+          line-height: 2.68vw;
+          padding-top: 3.57vw
+        }
+        @include nsm {
+          text-align: center;
+          font-size: 6.55vw;
+          line-height: 6.25vw;
+          padding-top: 12.19vw
+        }
+      }
+
+
+    &__wrapper {
+        margin-right: 27px;
+        @include nlgx {
+            margin-right: 1.72vw;
+        }
+        @include nsm {
+            margin-right: 0vw;
+        }
+
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        max-width: 735px;
+        width: 100%;
+        padding-top: 23px;
+    
+        @include nlgx {
+            max-width: 46.82vw;
+          padding-top: 1.46vw;
+        }
+        @include nsm {
+            max-width: 93.75vw;
+          padding-top: 5.63vw;
+        }
+      }
+
+    &__input {
+    border: 1px solid #00000052;
+    height: 68px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    padding-left: 24px;
+    width: 735px;
+
+    @include nlgx {
+        height: 4.33vw;
+        border-radius: 0.64vw;
+        margin-bottom: 1.59vw;
+        padding-left: 1.53vw;
+        width: 46.82vw;
+    }
+    @include nsm {
+        height: 15.63vw;
+        border-radius: 10px;
+        margin-bottom: 3.75vw;
+        padding-left: 6.25vw;
+        width: 93.75vw;
+    }
+    }
+
+    &__input::placeholder {
+    font-size: 20px;
+    line-height: 19.9px;
+
+    @include nlgx {
+        font-size: 1.27vw;
+        line-height: 1.21vw;
+    }
+    @include nsm {
+        font-size: 4.38vw;
+        line-height: 4.38vw;
+    }
+    }
+
+        
+    &__input:nth-child(3) {  
+        margin-bottom: 28px;
+        @include nlgx {
+          margin-bottom: 1.78vw;
+        }
+        @include nsm {
+          margin-bottom: 3.75vw;
+        }
+      }
+    
+    &__input:focus {
+    border: 2px solid rgb(108, 154, 253);
+    box-shadow: 0px 0px 10px 2px rgb(108, 154, 253);
+    }
+
+
+    &__textarea {
+        border: 1px solid #00000052;
+        resize: none;
+        height: 137px;
+        border-radius: 10px;
+        padding-left: 24px;
+        margin-bottom: 24px;
+        padding-top: 19px;
+
+    
+    
+        @include nlgx {
+          height: 8.73vw;
+          border-radius: 0.64vw;
+          padding-left: 1.53vw;
+          margin-bottom: 1.53vw;
+          padding-top: 1.21vw; 
+        }
+        @include nsm {
+          height: 39.69vw;
+          border-radius: 3.13vw;
+          padding-left: 6.25vw;
+          margin-bottom: 3.75vw;
+          padding-top: 3.75vw;
+      
+        }
+      }
+
+      &__textarea::placeholder {
+        font-size: 20px;
+        line-height: 19.9px;
+    
+        @include nlgx {
+          font-size: 1.27vw;
+          line-height: 1.21vw;
+          // padding-top: 1.53vw;
+        }
+        @include nsm {
+          font-size: 4.38vw;
+          line-height: 5vw;
+          width: 74.38vw;
+        }
+    
+      }
+    
+      &__textarea:focus {
+        border: 2px solid rgb(108, 154, 253);
+        box-shadow: 0px 0px 10px 2px rgb(108, 154, 253);
+      }
+
+    &__checkbox {
+        margin-bottom: 54px;
+        display: none;
+
+        @include nlgx {
+          margin-bottom: 3.44vw;
+        }
+        @include nsm {
+          margin-bottom: 8.69vw;
+          display: block;
+
+          
+        }
+      }
+    
+      &__checkbox>input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+      }
+    
+      &__checkbox>span {
+        display: inline-flex;
+        align-items: start;
+        user-select: none;
+        font-size: 18px;
+        line-height: 25.2px;
+    
+        
+        @include nlgx {
+          font-size: 1.15vw;
+          line-height: 1.59vw;
+          // margin-bottom: 3.18vw;
+        }
+        @include nsm {
+          font-size: 3.75vw;
+          line-height: 5.94vw;
+      
+        }
+      }
+    
+      &__checkbox>span::before {
+        content: '';
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 2px solid #292D32;
+        border-radius: 8px;
+        margin-right: 20px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+        @include nsm {
+          width: 6.25vw;
+          height: 6.25vw;
+          margin-right: 6.25vw;
+          border-radius: 2.10vw;
+          border: 1px solid #292D32;
+    
+        }
+      }
+    
+      /* стили при наведении курсора на checkbox */
+      &__checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+        border-color: #89bbf3;
+      }
+    
+      /* стили для активного чекбокса (при нажатии на него) */
+      &__checkbox>input:not(:disabled):active+span::before {
+        background-color: #89bbf3;
+        border-color: #89bbf3;
+      }
+    
+      /* стили для чекбокса, находящегося в фокусе */
+      &__checkbox>input:focus+span::before {
+        box-shadow: 0px 0px 10px 2px rgb(108, 154, 253);
+      }
+    
+      /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+      &__checkbox>input:focus:not(:checked)+span::before {
+        border-color: #80bdff;
+      }
+    
+      /* стили для чекбокса, находящегося в состоянии checked */
+      &__checkbox>input:checked+span::before {
+        border-color: #2468FF;
+        background-color: #2468FF;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+      }
+    
+      /* стили для чекбокса, находящегося в состоянии disabled */
+      &__checkbox>input:disabled+span::before {
+        background-color: #e9ecef;
+      }
+
+
+    &__button {
+        font-weight: 500;
+        background-color: #2468FF;
+        font-size: 27px;
+        line-height: 26.68px;
+        width: 363px;
+        margin-top: 24px;
+
+    
+        @include nlgx {
+          font-size: 1.72vw;
+          line-height: 1.66vw;
+          width: 23.12vw;
+          margin-top: 1.53vw;
+
+        }
+        @include nsm {
+          font-size: 5vw;
+          line-height: 4.69vw;
+          width: 100%;
+          height: 15vw;
+          margin-top: 0;
+
+        }
+      }
+      &__img {
+        width: 726.12px;
+        height: 547.46px;
+        @include nlgx {
+          width: 46.24vw;
+          height: 34.84vw;
+        }
+        @include nsm {
+          display: none;
+        }
+      }
+}
+
+  
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+
+

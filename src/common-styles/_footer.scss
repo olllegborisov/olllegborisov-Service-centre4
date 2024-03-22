@@ -1,9 +1,3 @@
-@import '../base/utils';
-@import '../base/base';
-@import '../base/normalize';
-@import '../base/typography';
-
-
 .footer {
     background: linear-gradient(117.79deg, #FFFFFF -22.73%, rgba(224, 230, 251, 0.36) 126.83%);
   
@@ -168,14 +162,14 @@
       color: #2468FF;
       position: relative;
       font-weight: 900;
-      font-size: 44px;
+      font-size: 38px;
       line-height: 60px;
       @include nlgx {
-        font-size: 2.80vw;
+        font-size: 2.42vw;
         line-height: 3.82vw;
       }
       @include nsm {
-        font-size: 5.5vw;
+        font-size: 4.7vw;
         line-height: 8.13vw;
       }
     }
