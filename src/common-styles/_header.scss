@@ -50,7 +50,7 @@
         padding-top: 6vw;
         padding-bottom: 6vw;
         background-color: #FFF;
-  
+        height: 14vw;
       }
     }
     &__title-mob-popup {
@@ -204,7 +204,7 @@
       }
     }
     &__popup-mob.active {
-      transform: translateY(-20px);
+      transform: translateY(0px);
     }
   
     &__popup-wrapper {

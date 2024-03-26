@@ -1,7 +1,6 @@
 .background {
     background: linear-gradient(117.79deg, #FFFFFF -22.73%, #D6DFFF 126.83%);
 }
-
 .trade-in {
 
 
@@ -271,6 +270,7 @@
 
 }
 .feedback {
+
     &__wrapper {
         background-color: #B3BAD4;
         display: flex;
@@ -289,14 +289,20 @@
             padding-left: 2vw;
             padding-top: 8.44vw;
             margin-bottom: 8.75vw;
-            margin: 0 3.2vw;
+            margin: 0 3.2vw 12.50vw 3.2vw;
         }
         }
 
     &__text-group {
         display: flex;
         flex-direction: column;
-
+        width: 736px;
+        @include nlgx {
+            width: 46.88vw;
+        }
+        @include nsm {
+            width: 83.75vw;
+        }
     }
 
     &__subtitle {
@@ -409,6 +415,22 @@
         }
     }
 
+    &__item:nth-of-type(1) > &__text {
+        @include nsm {
+            width: 47.81vw;
+        }
+    }
+
+    &__item:nth-of-type(2) > &__text{
+        width: 648px;
+        @include nlgx {
+            width: 41.27vw;
+        }
+        @include nsm {
+            width: 68.44vw;
+        }
+    }
+
 
     &__img {
         width: 609px;
@@ -427,5 +449,337 @@
 
     }
 }
+.trade-in-form {
+    padding-bottom: 124px;
+    @include nlgx {
+        padding-bottom: 7.90vw;
+    }
+    @include nsm {
+        padding-bottom: 10.63vw;  
+    }
+
+    & .container-box {
+        @include nsm {
+            padding: 0 3vw;  
+        }
+    }
+
+    &__wrapper-main {
+        background-color: #B3BAD4;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 20px;
+        padding-left: 58px;
+        @include nlgx {
+            border-radius: 1.27vw;
+            padding-left: 3.69vw; 
+        }
+        @include nsm {
+            display: flex;
+            justify-content: center;
+            border-radius: 2.50vw;
+            padding-left: 0vw;
+            padding-top: 8.44vw;
+
+        }
+    }
+
+    &__form-wrapper {
+        padding-top: 46px;
+        @include nlgx {
+            padding-top: 2.93vw;
+        }
+        @include nsm {
+            padding-top: 0px;
+        }
+    }
+
+    &__subtitle-wrapper {
+        @include nsm {
+            width: 66.25vw;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 500;
+        font-size: 43px;
+        line-height: 42.48px;
+        margin-bottom: 43px;
+        @include nlgx {
+            font-size: 2.74vw;
+            line-height: 2.68vw;
+            margin-bottom: 2.74vw;
+        }
+        @include nsm {
+            font-size: 6.25vw;
+            line-height: 6.715vw;
+            margin-bottom: 6.175vw;
+        }
+    }
+
+    &__wrapper {
+        width: 631px;
+        @include nlgx {
+            width: 40.19vw;
+        }
+        @include nsm {
+            width: 87.50vw;
+        }
+    }
+
+    &__form {
+        width: 629px;
+        @include nlgx {
+            width: 40.06vw;
+        }
+        @include nsm {
+            width: 87.50vw;
+        }
+    }
+
+
+
+    &__input {
+        border: none;
+        border-radius: 13px;
+        width: 629px;
+        height: 70px;
+        padding-left: 24px;
+        margin-bottom: 20px;
+        @include nlgx {
+            width: 40.06vw;
+            height: 4.46vw;
+            padding-left: 1.53vw;
+            margin-bottom: 1.27vw;
+            border-radius: 0.83vw;
+        }
+        @include nsm {
+            width: 87.50vw;
+            height: 15.63vw;
+            padding-left: 6.25vw;
+            margin-bottom: 3.75vw;
+            border-radius: 3.13vw;
+        }
+    }
+
+    &__input::placeholder {
+        color: #2A2A2A;
+        line-height: 19.9px;
+        font-size: 20px;
+        @include nlgx {
+            line-height: 1.21vw;
+            font-size: 1.27vw;
+        }
+        @include nsm {
+            line-height: 4.353vw;
+            font-size: 4.38vw;
+        }
+    }
+
+    &__input:nth-of-type(3){
+        margin-bottom: 30px;
+        @include nlgx {
+            margin-bottom: 1.91vw;
+        }
+        @include nsm {
+            margin-bottom: 5.63vw;
+        }
+    }
+
+
+    &__checkbox {
+        display: block;
+        margin-bottom: 37px;
+        @include nlgx {
+            margin-bottom: 2.36vw;
+        }
+        @include nsm {
+            margin-bottom: 10.94vw;
+        }
+    }
+
+    &__checkbox>input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+      }
+    
+      &__checkbox>span {
+        display: inline-flex;
+        align-items: start;
+        user-select: none;
+        font-size: 18px;
+        line-height: 24.2px;
+    
+        
+        @include nlgx {
+          font-size: 1.15vw;
+          line-height: 1.59vw;
+          // margin-bottom: 3.18vw;
+        }
+        @include nsm {
+          font-size: 3.75vw;
+          line-height: 5.94vw;
+      
+        }
+      }
+    
+      &__checkbox>span::before {
+        content: '';
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 2px solid #292D32;
+        border-radius: 8px;
+        margin-right: 20px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+        margin-top: 4px;
+        @include nlgx {
+            margin-top: 0.25vw;
+            margin-right: 1.27vw;
+            width: 1.78vw;
+            height: 1.78vw;
+            border-radius: 0.51vw;
+        }
+        @include nsm {
+          width: 6.25vw;
+          height: 6.25vw;
+          margin-right: 6.25vw;
+          border-radius: 2.10vw;
+          border: 1px solid #292D32;
+    
+        }
+      }
+
+      &__checkbox._error>span::before {
+        box-shadow: 0 0 15px red;
+      }
+    
+      /* стили при наведении курсора на checkbox */
+      &__checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+        border-color: #89bbf3;
+      }
+    
+      /* стили для активного чекбокса (при нажатии на него) */
+      &__checkbox>input:not(:disabled):active+span::before {
+        background-color: #89bbf3;
+        border-color: #89bbf3;
+      }
+    
+      /* стили для чекбокса, находящегося в фокусе */
+      &__checkbox>input:focus+span::before {
+        box-shadow: 0px 0px 10px 2px rgb(108, 154, 253);
+      }
+    
+      /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+      &__checkbox>input:focus:not(:checked)+span::before {
+        border-color: #80bdff;
+      }
+    
+      /* стили для чекбокса, находящегося в состоянии checked */
+      &__checkbox>input:checked+span::before {
+        border-color: #2468FF;
+        background-color: #2468FF;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+      }
+    
+      /* стили для чекбокса, находящегося в состоянии disabled */
+      &__checkbox>input:disabled+span::before {
+        background-color: #e9ecef;
+      }
+
+    & .checkbox-text {
+        font-size: 16px;
+        align-self: start;
+        @include nlgx {
+            font-size: 1.02vw;
+        }
+        @include nsm {
+            font-size: 3.75vw;
+        }
+      }
+
+    &__button {
+        width: 100%;
+        height: 71px;
+        padding: 22px 199.5px;
+        font-size: 27px;
+        line-height: 26.68px;
+        margin-bottom: 51px;
+        @include nlgx {
+            height: 4.52vw;
+            padding: 1.40vw 12.707vw;
+            font-size: 1.72vw;
+            line-height: 1.69vw;
+            margin-bottom: 3.25vw;
+        }
+        @include nsm {
+            height: 14.38vw;
+            padding: 4.69vw 21.56vw;
+            font-size: 5vw;
+            line-height: 4.94vw;
+            margin-bottom: 10.63vw;
+            width: 86.25vw;
+        }
+    }
+
+    &__img {
+        width: 762px;
+        height: 522px;
+        margin-right: 36px;
+        @include nlgx {
+            width: 48.54vw;
+            height: 33.25vw;
+            margin-right: 2.29vw;
+        }
+        @include nsm {
+            display: none;
+        }
+    }
+}
+
+
+
+// error формы
+
+.form__body {
+    position: relative;
+  }
+  .form__body:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(51, 51, 51, 0.9) url('./loading.gif') center / 50px no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease 0s;
+  }
+  
+  .form__body._sending:after {
+    opacity: 1;
+    visibility: visible;
+  }
+  .form__item {
+  }
+  .form__label {
+  }
+  .trade-in-form__input._error {
+    box-shadow: 0 0 15px red;
+  }
+  ._req {
+  }
+  ._email {
+  }
+
+
+
 
 

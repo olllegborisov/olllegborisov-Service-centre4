@@ -114,21 +114,21 @@
                         <h2 class="form2__subtitle">Оформить заявку на ремонт</h2>
                     </div>
                     <div class="form2__wrapper">
-                        <form action="#" class="form2__form">
-                            <input type="text" class="form2__input" placeholder="Ваше имя">
-                            <input type="text" class="form2__input" placeholder="Контактный телефон">
-                            <input type="text" class="form2__input" placeholder="E-mail">
+                        <form action="#" id="form2" class="form2__form">
+                            <input type="text" class="form2__input _req" placeholder="Ваше имя">
+                            <input type="text" class="form2__input _req" placeholder="Контактный телефон">
+                            <input type="text" class="form2__input _req _email" placeholder="E-mail">
                             <textarea name="" id="" cols="30" rows="10" class="form2__textarea" placeholder="Модель оборудования, симптомы поломки"></textarea>
                             <label class="form2__checkbox">
-                                <input type="checkbox" value="value">
+                                <input type="checkbox" class=" _req" value="value">
                                 <span  class="checkbox-text">Я ознакомлен(а) с политикой конфиденциальности и даю согласие на обработку персональных данных</span>
                             </label>     
-                            <button class="form2__button">Оформить заявку</button>
+                            <button type="submit" class="form2__button">Оформить заявку</button>
                         </form>
                     </div>
                 </div>
             </div>
-        </section>
+        </section>    
 
         <footer class="footer">
             <img src="../content/images/footer/logo-mobile.svg" alt="логотип" class="footer__logo-mobile">
@@ -185,6 +185,6 @@
         </footer>
     </div>
     <script src="/src/swiper/swiper-bundle.min.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/contacts.js"></script>
 </body>
 </html>

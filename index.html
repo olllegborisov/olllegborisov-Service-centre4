@@ -51,12 +51,12 @@
                         Сервисный&nbsp;центр</div>
                     </div>
                 <div class="header__popup-wrapper">
-                    <a href="../index.html" class="header__item">Главная</a>
-                    <a href="./pages/guarantee.html" class="header__item">Гарантия</a>
-                    <a href="./pages/delivery.html" class="header__item">Доставка</a>
-                    <a href="./pages/about.html" class="header__item">О нас</a>
-                    <a href="./pages/trade-in.html" class="header__item">Trade-in</a>
-                    <a href="./pages/contacts.html" class="header__item">Контакты</a>
+                    <a href="../index.html" class="header__item-mob">Главная</a>
+                    <a href="./pages/guarantee.html" class="header__item-mob">Гарантия</a>
+                    <a href="./pages/delivery.html" class="header__item-mob">Доставка</a>
+                    <a href="./pages/about.html" class="header__item-mob">О нас</a>
+                    <a href="./pages/trade-in.html" class="header__item-mob">Trade-in</a>
+                    <a href="./pages/contacts.html" class="header__item-mob">Контакты</a>
                 <div class="header__phone-wrapper">
                 <a href=""><img class="header__img" src="./content/header/phone.svg" alt="телефон" ></a>
                     <a class="header__phone" href="#" >7 (800) 222-39-06 </a>
@@ -74,7 +74,7 @@
                     </p>
                     <p class="description__text">Поэтому наш богатый опыт и желание помочь направлены на то,
                         чтобы решить все проблемы, возникшие у клиента с его техникой.</p>
-                    <button class="description__button">Оформить заявку</button>
+                    <button class="description__button" id="description-button">Оформить заявку</button>
                 </div>
             </div>
         </section>
@@ -204,21 +204,21 @@
                 </div>
             </div>
         </section>
-        <section class="form">
+        <section class="form" id="form-wrap">
             <div class="container-box">
                 <h2 class="form__subtitle">Оформить заявку на ремонт</h2>
             </div>
             <div class="form__wrapper container-box">
-                <form action="#" class="form__form">
-                    <input type="text" class="form__input" placeholder="Ваше имя">
-                    <input type="text" class="form__input" placeholder="Контактный телефон">
-                    <input type="text" class="form__input" placeholder="E-mail">
+                <form action="#" id="form" class="form__form">
+                    <input type="text" class="form__input _req" placeholder="Ваше имя">
+                    <input type="text" class="form__input _req" placeholder="Контактный телефон">
+                    <input type="text" name="email"  class="form__input _req _email" placeholder="E-mail">
                     <textarea name="" id="" cols="30" rows="10" class="form__textarea" placeholder="Модель оборудования, симптомы поломки"></textarea>
                     <label class="form__checkbox">
-                        <input type="checkbox" value="value">
+                        <input type="checkbox" class="checkbox _req" value="value">
                         <span  class="checkbox-text">Я ознакомлен(а) с политикой конфиденциальности и даю согласие на обработку персональных данных</span>
                     </label>     
-                    <button class="form__button">Оформить заявку</button>
+                    <button type="submit" class="form__button">Оформить заявку</button>
                 </form>
                 <img class="form__img" src="./content/images/form/desktop/item.webp" alt="ноутбук">
             </div>

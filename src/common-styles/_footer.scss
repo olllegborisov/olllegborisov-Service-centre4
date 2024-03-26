@@ -131,11 +131,9 @@
   
     &__page {
       margin-bottom: 36px;
+
       @include nlgx {
-        margin-bottom: 2.29vw;
-      }
-      @include nlgx {
-        margin-bottom: 4.38vw;
+        margin-bottom: 2.18vw;
       }
     }
   

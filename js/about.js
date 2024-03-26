@@ -1,28 +1,27 @@
-'use strict';
+'use strict'
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
 
-    let options = {
-        rootMargin: '0px',
-        threshold: 0.2,
-    };
+    const button = document.querySelector('.choose__button');
+    const close = document.querySelector('.pop-up-form__close');
+    const popUp = document.querySelector('.pop-up-wrapper');
+    const background = document.querySelector('.pop-up-background');
 
-    let appearance = (entries, observer) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = 1;
-                // entry.target.style.paddingTop = 0;
-            }
-        })
-    }
+    button.addEventListener('click', () => {
+        popUp.classList.add('_active')
+        background.classList.add('_active')
+    });
 
-    const observer = new IntersectionObserver(appearance, options);
-    const targets = document.querySelectorAll('.changes__item_js');
-    console.log(targets);
+    close.addEventListener('click', () => {
+        popUp.classList.remove('_active')
+        background.classList.remove('_active')
+    });
 
-    targets.forEach(item => {
-        observer.observe(item);
-    })
+    background.addEventListener('click', () => {
+        popUp.classList.remove('_active')
+        background.classList.remove('_active')
+    });
+
 
 
 
@@ -101,6 +100,5 @@ document.addEventListener('DOMContentLoaded', () => {
     function emailTest(input) {
         return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value)
     }
+
 });
-
-
