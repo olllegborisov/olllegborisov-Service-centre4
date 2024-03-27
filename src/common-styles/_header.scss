@@ -300,6 +300,7 @@
     .__select__content {
       z-index: 5000;
       opacity: 1;
+      visibility: visible;
     }
     
     .__select__label + .__select__input + .__select__label {
@@ -404,6 +405,7 @@
   transition: all 0.3s ease-out;
   opacity: 0;
   z-index: 5000;
+  visibility: hidden;
 
   height: 300px;
     @include nlgx {
@@ -514,6 +516,8 @@
     
     .__select__content {
       opacity: 1;
+      visibility: visible;
+
     }
     
     .__select__label-mob + .__select__input + .__select__label-mob {
