@@ -1,5 +1,8 @@
+
 .background {
     background: linear-gradient(117.79deg, #FFFFFF -22.73%, #D6DFFF 126.83%);
+    position: relative;
+    z-index: 1;
 }
 .trade-in {
 
@@ -450,6 +453,7 @@
     }
 }
 .trade-in-form {
+    position: relative;
     padding-bottom: 124px;
     @include nlgx {
         padding-bottom: 7.90vw;
@@ -777,6 +781,13 @@
   ._req {
   }
   ._email {
+  }
+
+  .pop-up-order {
+    top: 100px!important;
+    @include nlgx {
+        top: 1.53vw!important;
+    }
   }
 
 

@@ -9,6 +9,7 @@
 @import './pages/contacts';
 @import './pages/trade-in';
 @import './pages/about';
+@import './pages/personal-data';
 
 *,
 ::after,
@@ -224,7 +225,6 @@ body {
     @include nsm {
       margin-bottom: 2.02vw;
       line-height: 8.53vw;
-      // background-color: rebeccapurple;
     }
   }
 
@@ -631,6 +631,7 @@ body {
 }
 .form {
   background: linear-gradient(117.79deg, #FFFFFF -22.73%, #D6DFFF 126.83%);
+  position: relative;
   height: 848px;
 
   @include nlgx {
@@ -919,6 +920,8 @@ body {
     }
   }
 }
+
+// Выпадающее мени с вопросами и ответами
 .faq {
   padding-top: 128px;
   margin-bottom: 120px;
@@ -926,12 +929,6 @@ body {
   @include nlgx {
     padding: 1.21vw 0 3.8vw;    
   }
-  // @include nsm {
-  //   padding-bottom: 60px;
-  // }
-  // @include nxs {
-  //   padding: 19px 0 5px;
-  // }
 
 
   &__content {
@@ -966,9 +963,6 @@ body {
       margin-bottom: 11.25vw;
     }
 
-    // @include nxs {
-    //   margin-bottom: 24px;
-    // }
   }
 
   &__list {
@@ -984,13 +978,6 @@ body {
 
 
     }
-    // @include nsm {
-    //   margin: 0;
-    // }
-
-    // @include nxs {
-    //   padding-left: 20px;
-    // }
 
     li {
       font-weight: 800;
@@ -999,9 +986,6 @@ body {
       @include nlgx {
       font-size: 1.66vw;
       }
-      // @include nsm {
-      //   font-size: 4.5vw;
-      // }
     }
   }
 
@@ -1018,34 +1002,11 @@ body {
       font-size: 5vw;
       line-height: 5.94vw;
     }
-    // @include nmd {
-    //   font-size: 3.375vw;
-    //   padding-right: 0px;
-    //   font-weight: 600;
-
-    //   br {
-    //     display: block;
-    //   }
-    // }
-
-    // @include nsm {
-    //   font-size: clamp(4.375vw, 4vw, 50vw);
-    // }
 
     br {
       display: none;
     }
 
-    // p {
-    // position: relative;
-    // font-family: $font-petrov;
-    // font-weight: 800;
-    // font-style: normal;
-    // font-size: 26px;
-    // line-height: 110.69%;
-    // color: $YRealWhite;
-
-    // }
   }
 
   &__item {
@@ -1071,7 +1032,6 @@ body {
   }
 
   &__item:not(:last-of-type) {
-    // margin-bottom: 35px;
     margin-bottom: 43px;
     @include nlgx {
       margin-bottom: 2.74vw;
@@ -1137,7 +1097,7 @@ body {
 }
 
 
-
+// Стили ошибок при неправельном заполнении формы
 .form__body {
   position: relative;
 }
@@ -1172,6 +1132,165 @@ body {
 .checkbox._error {
   box-shadow: 0 0 15px red;
 }
+
+// Модальное окно
+
+.pop-up-order {
+  background-color: #B3BAD4;
+  position: absolute;
+  border-radius: 20px;
+  width: 542px;
+  height: 359px;
+  top: 200px;
+  margin-left: 700px;
+  z-index: 600;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  @include nlgxx {
+    margin-left: 36.46vw ;
+  }
+  @include nlgx {
+    border-radius: 1.27vw;
+    width: 34.52vw;
+    height: 22.87vw;
+    top: 12.74vw;
+    margin-left: 31.617834vw;
+  }
+  @include nsm {
+    border-radius: 2.50vw;
+    width: 93.75vw;
+    height: 93.75vw;
+    top: 31.56vw;
+    margin-left: 3.13vw;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    @include nlgx {
+      padding-top: 3.18vw;
+      
+    }
+    @include nsm {
+      padding-top: 15.63vw;
+    }
+  }
+
+  &__img {
+    width: 69px;
+    margin-bottom: 21px;
+    @include nlgx {
+      width: 4.39vw;
+      margin-bottom: 1.34vw;
+      
+    }
+    @include nsm {
+      width: 18.75vw;
+      margin-bottom: 7.81vw;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 46.6px;
+    @include nlgx {
+      font-size: 2.55vw;
+      line-height: 2.96815vw;
+    }
+    @include nsm {
+      font-size: 7.50vw;
+      line-height: 7.4093vw;
+    }
+  }
+
+  &__number-text {
+    font-size: 20px;
+    line-height: 32.8px;
+    margin-bottom: 26px;
+    @include nlgx {
+      font-size: 1.27vw;
+      line-height: 2.0891vw;
+      margin-bottom: 1.66vw;
+    }
+    @include nsm {
+      font-size: 5.63vw;
+      line-height: 9.225vw;
+      margin-bottom: 7.81vw;
+    }
+  }
+
+  &__number {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 32.8px;
+    @include nlgx {
+      font-size: 1.27vw;
+      line-height: 2.0891;
+    }
+    @include nsm {
+      font-size: 5.63vw;
+      line-height: 9.225vw;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 20px;
+    line-height: 28px;
+    width: 417px;
+    @include nlgx {
+      font-size: 1.27vw;
+      line-height: 1.78vw;
+      width: 26.56vw;
+    }
+    @include nsm {
+      font-size: 5.63vw;
+      line-height: 7.875vw;
+      width: 73.13vw;
+    }
+  }
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    @include nlgx {
+      top: 0.64vw;
+      right: 0.96vw;
+      width: 4.39vw;
+    }
+    @include nsm {
+      top: 4.06vw;
+      right: 3.75vw;
+      width: 7.50vw;
+    }
+  }
+}
+.pop-up-order._active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.pop-up-background._active::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  z-index: 50;
+  opacity: 0.7;
+  visibility: visible;
+}
+
+// Серый фон при открытии модального окна
+.background {
+  position: relative;
+  z-index: inherit;
+}
+
 
 
 

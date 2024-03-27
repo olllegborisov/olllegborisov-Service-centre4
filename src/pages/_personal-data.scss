@@ -1,0 +1,33 @@
+.personal-data {
+    margin-bottom: 50px;
+    @include nlgx {
+        margin-bottom: 3.18vw;
+    }
+    @include nsm {
+        margin-bottom: 5.81vw;
+    }
+    &__title {
+        padding: 50px 0px;
+        text-align: center;
+        font-size: 45px;
+        @include nlgx {
+            font-size: 2.87vw;
+            padding: 3.18vw 0px;
+        }
+        @include nsm {
+            font-size: 5.38vw;
+            margin-bottom: 5.81vw;
+        }
+    }
+
+    &__text {
+        display: inline-block;
+        font-size: 20px;
+        @include nlgx {
+            font-size: 1.27vw;
+        }
+        @include nsm {
+            font-size: 4.38vw;  
+        }
+    }
+}

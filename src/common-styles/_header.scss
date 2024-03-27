@@ -1,4 +1,6 @@
 .header {
+  position: relative;
+  z-index: 5;
     @include nsm {
       max-height: 23vw;
     }
@@ -197,7 +199,7 @@
       text-align: center;
       transition: transform 0.4s ease-out;
       transform: translateY(-1500px);
-      z-index: 10;
+      z-index: 50000;
       display: none; 
       @include nsm {
         display: block;
@@ -225,7 +227,7 @@
     &__phone-wrapper {
       border-top: 2px #E1EEFF solid;
       margin-top: 2vw;
-      padding: 6.5vw 0vw 6vw 0vw;
+      padding: 6.5vw 0vw 16vw 0vw;
       justify-content: center;
       display: flex;
     }
@@ -254,3 +256,414 @@
   
     }
   }
+
+
+// menu cities 
+.__select {
+  ::-webkit-scrollbar {
+    width: 6px;
+    display: none;
+    // background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    display: none;
+  }
+  position: relative;
+  width: 125px;
+  height: 40px;
+
+  @include nlgx {
+    width: 9.24vw;
+    height: 2.55vw;
+  }
+
+  &[data-state="active"] {
+    .__select__title {
+      &::before {
+        transform: translate(-3px, -50%) rotate(-45deg);
+        @include nlgx {
+          transform: translate(-0.19vw, -50%) rotate(-45deg);
+        }
+      }
+
+      &::after {
+        transform: translate(3px, -50%) rotate(45deg);
+        @include nlgx {
+          transform: translate(0.19vw, -50%) rotate(45deg);
+        }
+      }
+    }
+    
+    .__select__content {
+      z-index: 5000;
+      opacity: 1;
+    }
+    
+    .__select__label + .__select__input + .__select__label {
+      max-height: 40px;
+      border-top-width: 1px;
+      @include nlgx {
+        max-height: 2.55vw;
+      }
+    }
+  }
+}
+.__select__title {
+  display: flex;
+  align-items: baseline;
+  font-weight: 500;
+  font-size: 25px;
+  width: 100%;
+  height: auto;
+  padding: 0px 16px 0px 0px;
+  position: absolute;
+  overflow: hidden;
+  @include nlgx {
+    padding: 0px 1.02vw; 
+    font-size: 1.59vw;
+  }
+
+  
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 60%;
+    right:  2px;
+    display: block;
+    width: 10px;
+    height: 2px;
+    transition: all 0.3s ease-out;
+    background-color: #2468FF;
+    transform: translate(-3px, -50%) rotate(45deg);
+    @include nlgx {
+      width: 0.64vw;
+      right: 0vw;
+      height: 0.13vw;
+      transform: translate(-0.19vw, -50%) rotate(45deg);
+    }
+  }
+  &::after {
+    transform: translate(3px, -50%) rotate(-45deg);
+    @include nlgx {
+      transform: translate(0.19vw, -50%) rotate(-45deg);
+    }
+  }
+
+  &:hover {
+    border-color: #2468FF;
+
+    &::before,
+    &::after {
+      background-color: #2468FF;
+    }
+  }
+}
+// .reset {
+//   display: flex;
+//   width: 230px;
+//   padding: 8px 16px;
+//   margin: 0 auto;
+//   margin-bottom: 10px;
+  
+//   border: solid 1px #c7ccd1;
+//   border-radius: 5px;
+  
+//   transition: all 0.2s ease-out;
+  
+//   cursor: pointer;
+  
+//   font-weight: bold;
+  
+//   background-color: #ffffff;
+//   color: #333333;
+  
+//   &:hover {
+//     background-color: #2468FF;
+//     color: #ffffff;
+//   }
+// }
+.__select__content {
+  position: absolute;
+  top: 30px;
+  left: 3px;
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  background-color: #ffffff;
+  border: 1px solid #c7ccd1;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  z-index: 5000;
+
+  height: 300px;
+    @include nlgx {
+      top: 1.91vw;
+      left: 0.19vw;
+      width: 17.20vw;
+    }
+}
+.__select__input {
+  display: none;
+
+  &:checked + label {
+    background-color: #dedede;
+  }
+  &:disabled + label {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+}
+.__select__label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  max-height: 0;
+  padding: 19px 16px;
+  font-size: 25px;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  overflow: hidden;
+  @include nlgxx {
+    justify-content: center;
+    text-align: center;
+  }
+
+  @include nlgx {
+    padding: 1.21vw 1.02vw;
+    font-size: 1.59vw;
+  }
+
+  & + input + & {
+    border-top: 0 solid #C7CCD160;
+  }
+
+  &:hover {
+    background-color: #2468FF !important;
+
+    color: #ffffff;
+  }
+}
+.__select__label:first-of-type {
+  display: none;
+} 
+
+// menu cities mob
+
+.__select-mob {
+  ::-webkit-scrollbar {
+    width: 6px;
+    display: none;
+    // background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    display: none;
+  }
+  position: relative;
+  width: 145px;
+  height: 40px;
+  margin: 0 auto;
+
+  @include nlgx {
+    width: 9.24vw;
+    height: 2.55vw;
+  }
+  @include nsm {
+    width: max-content;
+    height: 6.25vw;
+    top: -10.75vw;
+  }
+
+  &[data-state-mob="active"] {
+    .__select__title-mob {
+      &::before {
+        transform: translate(-3px, -50%) rotate(-45deg);
+        @include nlgx {
+          transform: translate(-0.19vw, -50%) rotate(-45deg);
+        }
+        @include nsm {
+          transform: translate(-0.69vw, -50%) rotate(-45deg);
+          
+        }
+      }
+
+      &::after {
+        transform: translate(3px, -50%) rotate(45deg);
+        @include nlgx {
+          transform: translate(0.19vw, -50%) rotate(45deg);
+        }
+        @include nsm {
+          transform: translate(0.69vw, -50%) rotate(45deg);
+          
+        }
+      }
+    }
+    
+    .__select__content {
+      opacity: 1;
+    }
+    
+    .__select__label-mob + .__select__input + .__select__label-mob {
+      max-height: 40px;
+      border-top-width: 1px;
+      @include nlgx {
+        max-height: 2.55vw;
+      }
+      @include nsm {
+        max-height: 6.5vw;
+      }
+    }
+  }
+}
+.__select__title-mob {
+  display: flex;
+  align-items: baseline;
+  font-weight: 500;
+  font-size: 25px;
+  width: 100%;
+  height: 100%;
+  padding: 0px 16px;
+  @include nlgx {
+    padding: 0px 1.02vw; 
+    font-size: 1.59vw;
+  }
+  @include nsm {
+    font-size: 5vw;
+    padding: 0 1.56vw;
+  }
+
+  
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 44%;
+    right: 16px;
+    display: block;
+    width: 10px;
+    height: 2px;
+    transition: all 0.3s ease-out;
+    background-color: #2468FF;
+    transform: translate(-3px, -50%) rotate(45deg);
+    @include nlgx {
+      width: 0.64vw;
+      right: 1.02vw;
+      height: 0.13vw;
+      transform: translate(-0.19vw, -50%) rotate(45deg);
+    }
+    @include nsm {
+      width: 2vw;
+      right: -2.32vw;
+      height: 0.33vw;
+      transform: translate(-0.69vw, -50%) rotate(45deg);
+    }
+  }
+  &::after {
+    transform: translate(3px, -50%) rotate(-45deg);
+    @include nlgx {
+      transform: translate(0.19vw, -50%) rotate(-45deg);
+    }
+    @include nsm {
+      transform: translate(0.69vw, -50%) rotate(-45deg);
+      
+    }
+  }
+
+  &:hover {
+    border-color: #2468FF;
+
+    &::before,
+    &::after {
+      background-color: #2468FF;
+    }
+  }
+}
+.__select__content {
+  position: absolute;
+  top: 30px;
+  left: -90px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #c7ccd1;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  z-index: 5000;
+
+  overflow: overlay;
+
+    @include nlgx {
+      top: 1.91vw;
+      left: 5.73vw;
+    }
+    @include nsm {
+      top: 5.91vw;
+      left: -19.71vw;
+      width: 60.38vw;
+    }
+}
+.__select__input {
+  display: none;
+
+  &:checked + label {
+    background-color: #dedede;
+  }
+  &:disabled + label {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+}
+.__select__label-mob {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  max-height: 0;
+  padding: 0 16px;
+  font-size: 25px;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  overflow: hidden;
+
+  @include nlgx {
+    padding: 0 1.02vw;
+    font-size: 1.59vw;
+  }
+  @include nsm {
+    padding: 4vw 1.02vw;
+    font-size: 5vw;
+  }
+
+  & + input + & {
+    border-top: 0 solid #C7CCD160;
+  }
+
+  &:hover {
+    background-color: #2468FF !important;
+
+    color: #ffffff;
+  }
+}
+.__select__label-mob:first-of-type {
+  display: none;
+} 
