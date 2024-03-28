@@ -466,6 +466,8 @@
     margin-bottom: 25px;
     padding-left: 24px;
     width: 735px;
+    font-size: 20px;
+    
 
     @include nlgx {
         height: 4.33vw;
@@ -473,6 +475,7 @@
         margin-bottom: 1.59vw;
         padding-left: 1.53vw;
         width: 46.82vw;
+        font-size: 1.27vw;
     }
     @include nsm {
         height: 15.63vw;
@@ -480,6 +483,7 @@
         margin-bottom: 3.75vw;
         padding-left: 6.25vw;
         width: 93.75vw;
+        font-size: 4.38vw;
     }
     }
 
@@ -522,6 +526,7 @@
         padding-left: 24px;
         margin-bottom: 24px;
         padding-top: 19px;
+        font-size: 20px;
 
     
     
@@ -531,6 +536,7 @@
           padding-left: 1.53vw;
           margin-bottom: 1.53vw;
           padding-top: 1.21vw; 
+          font-size: 1.27vw;
         }
         @include nsm {
           height: 39.69vw;
@@ -538,7 +544,7 @@
           padding-left: 6.25vw;
           margin-bottom: 3.75vw;
           padding-top: 3.75vw;
-      
+          font-size: 4.38vw;
         }
       }
 

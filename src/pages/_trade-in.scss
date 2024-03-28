@@ -551,12 +551,14 @@
         height: 70px;
         padding-left: 24px;
         margin-bottom: 20px;
+        font-size: 20px;
         @include nlgx {
             width: 40.06vw;
             height: 4.46vw;
             padding-left: 1.53vw;
             margin-bottom: 1.27vw;
             border-radius: 0.83vw;
+            font-size: 1.27vw;
         }
         @include nsm {
             width: 87.50vw;
@@ -564,6 +566,7 @@
             padding-left: 6.25vw;
             margin-bottom: 3.75vw;
             border-radius: 3.13vw;
+            font-size: 4.38vw;
         }
     }
 

@@ -94,6 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         error++
                     }
 
+                } else if (input.classList.contains('_phone')) {
+                    validatePhoneNumberInput(input)
+                    if (!phoneTest(input)) {
+                        formAddError(input)
+                        error++
+                    }
                 } else {
                     if (input.value === '') {
 
@@ -114,6 +120,13 @@ document.addEventListener('DOMContentLoaded', () => {
         function formRemoveError(input) {
             input.parentElement.classList.remove('_error')
             input.classList.remove('_error')
+        }
+        function phoneTest(input) {
+            return /\d{4}/.test(input.value)
+        }
+        function validatePhoneNumberInput(input) {
+            // Удаление всех символов, кроме цифр
+            input.value = input.value.replace(/\D/g, '');
         }
         function emailTest(input) {
             return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value)

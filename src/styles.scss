@@ -752,7 +752,7 @@ body {
     padding-left: 24px;
     margin-bottom: 24px;
     padding-top: 25px;
-
+    font-size: 20px;
 
     @include nlgx {
       height: 8.73vw;
@@ -760,6 +760,7 @@ body {
       padding-left: 1.53vw;
       margin-bottom: 1.53vw;
       padding-top: 1.59vw;
+      font-size: 1.27vw;
     }
     @include nsm {
       height: 39.69vw;
@@ -767,6 +768,7 @@ body {
       padding-left: 6.25vw;
       margin-bottom: 3.75vw;
       padding-top: 5.63vw;
+      font-size: 4.38vw;
   
     }
   }
