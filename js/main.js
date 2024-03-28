@@ -113,8 +113,74 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Форма
     try {
+        // Отбивка в случае отправке данных из формы
+        const closeMain = document.querySelector('.pop-up-order__close');
+        const popUpMain = document.querySelector('.pop-up-order');
+        const backgroundMain = document.querySelector('.pop-up-background');
+
+        const popUp = document.querySelector('.pop-up-wrapper');
+
+        function popUpIsOpen() {
+            popUpMain.classList.add('_active')
+            backgroundMain.classList.add('_active')
+        }
+
+        closeMain.addEventListener('click', () => {
+            popUpMain.classList.remove('_active')
+            backgroundMain.classList.remove('_active')
+        });
+
+        // При нажатии на задний фон закрыввается окно
+        backgroundMain.addEventListener('mousedown', () => {
+            popUpMain.classList.remove('_active')
+            backgroundMain.classList.remove('_active')
+            popUp.classList.remove('_active')
+
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                popUpMain.classList.remove('_active')
+                backgroundMain.classList.remove('_active')
+            }
+        });
+
+
+        // сама форма
         const form = document.getElementById('form')
         form.addEventListener('submit', formSend)
+
+
+        async function formSend(e) {
+            e.preventDefault()
+
+            let error = formValidate(form)
+
+
+            if (error === 0) {
+                let formData = new FormData(form);
+
+                fetch('/post.php', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Access-Control-Allow-Origin': "*"
+                    }
+                })
+                    .then(res => {
+                        return res.json()
+                    })
+
+                    .then(data => {
+                        popUpIsOpen()
+                    })
+
+                    .catch(err => {
+                        console.log(err);
+                    })
+
+            }
+        }
 
 
 
@@ -145,33 +211,12 @@ document.addEventListener('DOMContentLoaded', function () {
                         error++
                     }
                 }
+
             }
+            return error
+
         }
 
-        async function formSend(e) {
-            e.preventDefault()
-
-            let error = formValidate(form)
-
-            if (error === 0) {
-                let formData = new FormData(form);
-
-
-                fetch('https://jsonplaceholder.typicode.com/posts', {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Access-Control-Allow-Origin': "*"
-                    }
-                })
-                    .then(res => {
-                        res.json()
-                    })
-                    .catch(err => {
-                        console.log(err);
-                    })
-            }
-        }
 
         function formAddError(input) {
             input.parentElement.classList.add('_error')
@@ -264,38 +309,7 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(err);
     }
 
-    // Отбивка в случае отправке данных из формы
     try {
-        const buttonMain = document.querySelector('.form__button');
-        const closeMain = document.querySelector('.pop-up-order__close');
-        const popUpMain = document.querySelector('.pop-up-order');
-        const backgroundMain = document.querySelector('.pop-up-background');
-
-
-        buttonMain.addEventListener('click', () => {
-            popUpMain.classList.add('_active')
-            backgroundMain.classList.add('_active')
-        });
-
-        closeMain.addEventListener('click', () => {
-            popUpMain.classList.remove('_active')
-            backgroundMain.classList.remove('_active')
-        });
-
-        // При нажатии на задний фон закрыввается окно
-        backgroundMain.addEventListener('mousedown', () => {
-            popUpMain.classList.remove('_active')
-            backgroundMain.classList.remove('_active')
-
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                popUpMain.classList.remove('_active')
-                backgroundMain.classList.remove('_active')
-                console.log('escape');
-            }
-        });
 
     } catch (error) {
         console.log(err);

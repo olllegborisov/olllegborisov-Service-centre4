@@ -5,9 +5,66 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // форма
     try {
-        const form = document.getElementById('form')
+
+        //Отбивка в случае отправке данных из формы
+        const close = document.querySelector('.pop-up-order__close');
+        const popUp = document.querySelector('.pop-up-order');
+        const background = document.querySelector('.pop-up-background');
+
+        function popUpIsOpen() {
+            popUp.classList.add('_active')
+            background.classList.add('_active')
+        }
+
+        close.addEventListener('click', () => {
+            popUp.classList.remove('_active')
+            background.classList.remove('_active')
+        });
+
+        background.addEventListener('mousedown', () => {
+            popUp.classList.remove('_active')
+            background.classList.remove('_active')
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                background.classList.remove('_active')
+                popUp.classList.remove('_active')
+            }
+        });
+
+
+        // Сама форма
+        const form = document.getElementById('form2')
         form.addEventListener('submit', formSend)
 
+        async function formSend(e) {
+            e.preventDefault()
+
+            let error = formValidate(form)
+
+            if (error === 0) {
+                let formData = new FormData(form);
+
+
+                fetch('/post.php', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Access-Control-Allow-Origin': "*"
+                    }
+                })
+                    .then(res => {
+                        return res.json()
+                    })
+                    .then(data => {
+                        popUpIsOpen()
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    })
+            }
+        }
 
 
         function formValidate(form) {
@@ -40,32 +97,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             }
+            return error;
         }
 
-        async function formSend(e) {
-            e.preventDefault()
-
-            let error = formValidate(form)
-
-            if (error === 0) {
-                let formData = new FormData(form);
-
-
-                fetch('https://jsonplaceholder.typicode.com/posts', {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Access-Control-Allow-Origin': "*"
-                    }
-                })
-                    .then(res => {
-                        res.json()
-                    })
-                    .catch(err => {
-                        console.log(err);
-                    })
-            }
-        }
 
         function formAddError(input) {
             input.parentElement.classList.add('_error')
@@ -84,41 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-
-    try {
-        //Отбивка в случае отправке данных из формы
-        const button = document.querySelector('.trade-in-form__button');
-        const close = document.querySelector('.pop-up-order__close');
-        const popUp = document.querySelector('.pop-up-order');
-        const background = document.querySelector('.pop-up-background');
-
-
-        button.addEventListener('click', () => {
-            popUp.classList.add('_active')
-            background.classList.add('_active')
-        });
-
-        close.addEventListener('click', () => {
-            popUp.classList.remove('_active')
-            background.classList.remove('_active')
-        });
-
-        background.addEventListener('mousedown', () => {
-            popUp.classList.remove('_active')
-            background.classList.remove('_active')
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                background.classList.remove('_active')
-                popUp.classList.remove('_active')
-            }
-        });
-
-    } catch (error) {
-        console.log(error);
-
-    }
 });
 
 

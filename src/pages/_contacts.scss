@@ -187,6 +187,12 @@
 .blocks {
     position: relative;
 
+    .pop-up-order._active {
+      @include nsm {
+        margin-top: 135vw;
+      }
+  }
+
     &__main-wrapper {
         display: flex;
         justify-content: space-between;

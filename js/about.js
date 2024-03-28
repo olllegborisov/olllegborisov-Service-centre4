@@ -3,6 +3,60 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     // открытия модального окна с формой (и отбивка в случае отправке данных из формы)
+    // try {
+    //     // модальное окно с формой
+    //     const button = document.querySelector('.choose__button');
+    //     const close = document.querySelector('.pop-up-form__close');
+    //     const popUp = document.querySelector('.pop-up-wrapper');
+    //     const background = document.querySelector('.pop-up-background');
+
+    //     // кнопка отрытия отбивки
+    //     const aboutButton = document.querySelector('.pop-up-form__button');
+
+    //     // отбивка
+    //     const popUpMain = document.querySelector('.pop-up-order');
+    //     const closeMain = document.querySelector('.pop-up-order__close');
+
+    //     button.addEventListener('click', () => {
+    //         popUp.classList.add('_active')
+    //         background.classList.add('_active')
+    //     });
+
+    //     close.addEventListener('click', () => {
+    //         popUp.classList.remove('_active')
+    //         background.classList.remove('_active')
+    //     });
+
+    //     background.addEventListener('click', () => {
+    //         popUp.classList.remove('_active')
+    //         background.classList.remove('_active')
+    //         popUpMain.classList.remove('_active')
+    //     });
+
+    //     // aboutButton.addEventListener('click', () => {
+    //     //     popUpMain.classList.add('_active')
+    //     //     popUp.classList.remove('_active')
+    //     // });
+
+    //     closeMain.addEventListener('click', () => {
+    //         popUpMain.classList.remove('_active')
+    //         background.classList.remove('_active')
+    //     });
+
+    //     document.addEventListener('keydown', (e) => {
+    //         if (e.key === 'Escape') {
+    //             popUpMain.classList.remove('_active')
+    //             background.classList.remove('_active')
+    //             popUp.classList.remove('_active')
+    //         }
+    //     });
+
+    // } catch (error) {
+    //     console.log(error);
+    // }
+
+
+    //форма
     try {
         // модальное окно с формой
         const button = document.querySelector('.choose__button');
@@ -11,32 +65,36 @@ document.addEventListener('DOMContentLoaded', function () {
         const background = document.querySelector('.pop-up-background');
 
         // кнопка отрытия отбивки
-        const aboutButton = document.querySelector('.pop-up-form__button');
+        const aboutButton = document.querySelector('.pop-up-form__button-about');
 
         // отбивка
         const popUpMain = document.querySelector('.pop-up-order');
         const closeMain = document.querySelector('.pop-up-order__close');
 
+
         button.addEventListener('click', () => {
             popUp.classList.add('_active')
             background.classList.add('_active')
         });
+        // Открывает отбивку и закрывает поп ап с формой
+        function popUpIsOpen() {
+            popUpMain.classList.add('_active')
+            popUp.classList.remove('_active')
+        }
 
-        close.addEventListener('click', () => {
+        close.addEventListener('mousedown', () => {
             popUp.classList.remove('_active')
             background.classList.remove('_active')
         });
 
         background.addEventListener('click', () => {
-            popUp.classList.remove('_active')
             background.classList.remove('_active')
             popUpMain.classList.remove('_active')
+            popUp.classList.remove('_active')
+
         });
 
-        aboutButton.addEventListener('click', () => {
-            popUpMain.classList.add('_active')
-            popUp.classList.remove('_active')
-        });
+
 
         closeMain.addEventListener('click', () => {
             popUpMain.classList.remove('_active')
@@ -51,15 +109,39 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-    } catch (error) {
-        console.log(error);
-    }
 
-
-    //форма
-    try {
-        const form = document.getElementById('form')
+        const form = document.getElementById('form-about')
         form.addEventListener('submit', formSend)
+
+        async function formSend(e) {
+            e.preventDefault()
+
+            let error = formValidate(form)
+
+            if (error === 0) {
+                let formData = new FormData(form);
+
+
+                fetch('/post.php', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Access-Control-Allow-Origin': "*"
+                    }
+                })
+                    .then(res => {
+                        return res.json()
+                    })
+
+                    .then(data => {
+                        popUpIsOpen();
+                    })
+
+                    .catch(err => {
+                        console.log(err);
+                    })
+            }
+        }
 
         function formValidate(form) {
             let error = 0
@@ -91,31 +173,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 }
             }
+            return error
         }
-        async function formSend(e) {
-            e.preventDefault()
 
-            let error = formValidate(form)
-
-            if (error === 0) {
-                let formData = new FormData(form);
-
-
-                fetch('https://jsonplaceholder.typicode.com/posts', {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Access-Control-Allow-Origin': "*"
-                    }
-                })
-                    .then(res => {
-                        res.json()
-                    })
-                    .catch(err => {
-                        console.log(err);
-                    })
-            }
-        }
 
         function formAddError(input) {
             input.parentElement.classList.add('_error')
