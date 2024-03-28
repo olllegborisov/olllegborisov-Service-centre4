@@ -888,6 +888,46 @@ body {
     background-color: #e9ecef;
   }
 
+  &__link {
+    // text-decoration: solid!important;
+	  // outline: #2468FF!important;
+    color: #0000FF;
+    position: relative;
+    // border-bottom: solid 1px #0000FF;
+  }
+
+  &__link:after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    background-color: #0000FF;
+    height: 1px;
+    width: 275px;
+    @include nlg {
+      width: 17.52vw;
+    }
+    @include nsm {
+      bottom: 5.95vw;
+      width: 18.2vw;
+    }
+  }
+
+  &__link:before {
+    @include nsm {
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      right: 0;
+      background-color: #0000FF;
+      height: 1px;
+      width: 37.6vw;
+    }
+  }
+
+
+
+
   &__button {
     font-weight: 500;
     background-color: #2468FF;
